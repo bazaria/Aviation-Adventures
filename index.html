@@ -6,18 +6,20 @@
 <meta charset="UTF-8">
 <title>Aviation Adventures</title>
 <link rel="stylesheet" href="custom.css">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
 <body>
 
 <header>
-
-	<a href="index.html">
-	<img class="sitelogo" src="img/logo2.png" alt="Aviation Adventures">
-		
-	</a>
-	<nav class="mainnav">
+	<div class="col-lg-2"></div>
+	<div class="container">
+		<a href="index.html">
+			<img class="sitelogo" src="img/logo2.png" alt="Aviation Adventures">
+		</a>
+	</div>
+	<div class="container">
+		<nav class="mainnav">
 			<ul id="navbar_list">
 				<li><a href="#">WHAT IS IT</a> </li>
 				<li><a href="#">WHY DO I NEED IT</a></li>
@@ -26,31 +28,40 @@
 				<li><a href="#">CONTACTS</a></li>
 			</ul>
 		</nav>
-
+	</div>
+	<div class="col-lg-2"></div>
 </header>
 
-<div class="maindiv">
-	<ul class="tabs">
-		<li class ="data-tabs current">
-			<h1>
-				Take a new angle on earth's<br> most beautiful sceneries
-			</h1>
-		</li>
-		<li class ="data-tabs">
-			<h1>
-				Take a new angle on earth's<br> most beautiful sceneries
-			</h1>
-		</li>
-		<li class ="data-tabs">
-			<h1>
-				Take a new angle on earth's<br> most beautiful sceneries
-			</h1>
-		</li>
-	</ul>
- <!-- <a class="booknow" href="#">BOOK NOW</a>-->
+<section>
+	<div class="col-lg-2"></div>
+	<div class="container">
+	<ul class="slides">
+    <input type="radio" name="radio-btn" id="img-1" checked />
+    <li class="slide-container">
+		<div class="slide" id="slide1">
+			<img src="img/mainimg.jpg"/>
+			<div class = "slide1-text-wrapper">
+			<h1><span>
+				TAKE A NEW ANGLE</h1></span><h1><span> ON EARTH'S BEST SCEBERIES</span></h1>
+        	</div>
+        </div>
+    </li>
+    <!--<input type="radio" name="radio-btn" id="img-2" />
+    <li class="slide-container">
+        <div class="slide slide2">
+          <img src="img/5thimg.jpg" />
+        </div>
+    </li>-->
+    </ul><!--
+    <li class="nav-dots">
+      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+    </li>-->
 	</div>
-	
-
-
+	<div class="col-lg-2"></div>
+ <!-- <a class="booknow" href="#">BOOK NOW</a>-->
+</section>
+<footer>
+</footer>
 </body>
 </html>
