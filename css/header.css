@@ -1,0 +1,37 @@
+
+#navbar_list {
+	text-transform: uppercase;
+	font-family:roboto;
+	float: right;
+	margin-right: 1.5em;
+	list-style-type: none;
+	margin-top: -3.25em;
+}
+
+#navbar_list li {
+	text-align: center;
+	display: inline;
+}
+
+#navbar_list li a {
+	
+    color: #000;
+    padding: 8px 12px;
+    text-decoration: none;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 600;
+}
+
+#navbar_list li a:hover {
+    color: #fff;
+	background-color: #266fc0;
+}
+
+.sitelogo
+{
+	width: 256px;
+	height: auto;
+	margin-left: 2.5em;
+	margin-top: 1.5em;
+}

@@ -5,8 +5,11 @@
 
 <meta charset="UTF-8">
 <title>Aviation Adventures</title>
-<link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/header.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="script.js"></script>
 </head>
 
 <body>
@@ -33,33 +36,44 @@
 </header>
 
 <section>
-	<div class="col-lg-2"></div>
-	<div class="container">
-	<ul class="slides">
-    <input type="radio" name="radio-btn" id="img-1" checked />
-    <li class="slide-container">
+	
+	<div class="container slides-container-container" id="div_to_scroll">	
+	<div class = "slides-container">
+
+	
+		<div class = "slide-container container">
+		
 		<div class="slide" id="slide1">
 			<img src="img/mainimg.jpg"/>
 			<div class = "slide1-text-wrapper">
 			<h1><span>
-				TAKE A NEW ANGLE</h1></span><h1><span> ON EARTH'S BEST SCEBERIES</span></h1>
+				TAKE A NEW ANGLE</span></h1><h1><span> ON EARTH'S BEST SCENERIES</span></h1>
         	</div>
         </div>
-    </li>
-    <!--<input type="radio" name="radio-btn" id="img-2" />
-    <li class="slide-container">
-        <div class="slide slide2">
-          <img src="img/5thimg.jpg" />
         </div>
-    </li>-->
-    </ul><!--
-    <li class="nav-dots">
-      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
-      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
-    </li>-->
-	</div>
-	<div class="col-lg-2"></div>
- <!-- <a class="booknow" href="#">BOOK NOW</a>-->
+  
+    	
+		<div class = "slide-container container">
+        <div class="slide" id="slide2">
+          <img src="img/5thimg.jpg"/>
+        </div>
+        </div><div class = "slide-container container">
+        <div class="slide" id="slide2">
+          <img src="img/5thimg.jpg"/>
+        </div>
+        </div><div class = "slide-container container">
+        <div class="slide" id="slide2">
+          <img src="img/5thimg.jpg"/>
+        </div>
+        </div><div class = "slide-container container">
+        <div class="slide" id="slide2">
+          <img src="img/5thimg.jpg"/>
+        </div>
+        </div>
+
+       </div> 
+    </div>
+
 </section>
 <footer>
 </footer>
