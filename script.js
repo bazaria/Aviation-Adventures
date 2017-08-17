@@ -11,18 +11,16 @@ function isEventSupported(eventName) {
 }
 
 $(document).ready(function() {
-    // Check which wheel event is supported. Don't use both as it would fire each event 
-    // in browsers where both events are supported.
     var wheelEvent = isEventSupported('mousewheel') ? 'mousewheel' : 'wheel';
     console.log(wheelEvent);
-    // Now bind the event to the desired element
     $('#div_to_scroll').on(wheelEvent, function(e) {
         var oEvent = e.originalEvent,
             delta  = oEvent.deltaY || oEvent.wheelDelta;
+            var div_to_scroll = document.getElementById('div_to_scroll');
+            var maxScrollLeft = div_to_scroll.scrollWidth - div_to_scroll.clientWidth;
+            console.log(maxScrollLeft);
 
-        // deltaY for wheel event
-        // wheelData for mousewheel event
-        $('#div_to_scroll').scrollLeft($('#div_to_scroll').scrollLeft() + delta);
+        $('#div_to_scroll').scrollLeft($('#div_to_scroll').scrollLeft() +((delta/100)*(maxScrollLeft/20)));
         e.preventDefault();
     });
 });
