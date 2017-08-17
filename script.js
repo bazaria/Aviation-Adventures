@@ -12,13 +12,19 @@ function isEventSupported(eventName) {
 
 $(document).ready(function() {
     var wheelEvent = isEventSupported('mousewheel') ? 'mousewheel' : 'wheel';
-    console.log(wheelEvent);
     $('#div_to_scroll').on(wheelEvent, function(e) {
+        
+        if($('#div_to_scroll').is(':animated'))
+        {
+            return false;
+        }
         var oEvent = e.originalEvent,
             delta  = oEvent.deltaY || oEvent.wheelDelta;
             var div_to_scroll = document.getElementById('div_to_scroll');
             var maxScrollLeft = div_to_scroll.scrollWidth - div_to_scroll.clientWidth;
             var quadScrollstr = String(maxScrollLeft/4);
+
+
         if(delta>0)
         {
             $('#div_to_scroll').animate({scrollLeft : "+=" +quadScrollstr}, 'slow');        
