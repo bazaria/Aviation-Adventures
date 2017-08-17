@@ -18,9 +18,14 @@ $(document).ready(function() {
             delta  = oEvent.deltaY || oEvent.wheelDelta;
             var div_to_scroll = document.getElementById('div_to_scroll');
             var maxScrollLeft = div_to_scroll.scrollWidth - div_to_scroll.clientWidth;
-            console.log(maxScrollLeft);
-
-        $('#div_to_scroll').scrollLeft($('#div_to_scroll').scrollLeft() +((delta/100)*(maxScrollLeft/20)));
+            var quadScrollstr = String(maxScrollLeft/4);
+        if(delta>0)
+        {
+            $('#div_to_scroll').animate({scrollLeft : "+=" +quadScrollstr}, 'slow');        
+        }
+        else{
+            $('#div_to_scroll').animate({scrollLeft : "-=" + quadScrollstr}, 'slow');    
+        }
         e.preventDefault();
     });
 });
