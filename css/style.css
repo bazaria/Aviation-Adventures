@@ -54,7 +54,12 @@ img{
 	display: inline-block;}
 
 
-
+.text{
+	font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	color:#252525;
+	font-weight: bold;
+	
+}
 .slide{
     width: 100%;
     padding: 0;
@@ -63,11 +68,6 @@ img{
     display: block;
 }
 
-.slide p, h1{
-    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;;
-	color:#252525;
-	font-weight: bold !important;
-}
 .background-image{
     z-index: 1;
     width: 100%;
@@ -87,10 +87,7 @@ img{
 .slide1-text-wrapper h1{
 	font-size: 55px;
 	text-align: center;
-    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;;
-	color:#252525;
-	text-transform: uppercase;
-	font-weight: bold;
+    text-transform: uppercase;
 	padding:0;
 	margin:13px;
 }
@@ -116,11 +113,8 @@ img{
 	float: right;
 }
 .slide1-info-textwrapper p{
-	color:#252525;
 	font-size: 14px;
-    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;;
-	text-transform: uppercase;
-	font-weight: bold;
+    text-transform: uppercase;
 	padding:0;
 	margin: 0;
 }
@@ -140,20 +134,16 @@ img{
 	position: absolute;
 	top:10%;
 	left:7%;
-	font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: bold;
 }
 .slide-title{
 	text-transform: uppercase;
 	font-size: 46px;
-	color:#252525;
 }
 
 .slide-body-text{
 	margin-top: 30px;
 	font-weight: bold;
 	font-size: 25px;
-	color:#252525;
 }
 
 .slide6-text-wrapper{
