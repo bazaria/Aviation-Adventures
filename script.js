@@ -27,10 +27,10 @@ $(document).ready(function() {
 
         if(delta>0)
         {
-            $('#div_to_scroll').animate({scrollLeft : "+=" +quadScrollstr}, 'slow');        
+            $('#div_to_scroll').animate({scrollLeft : "+=" +quadScrollstr}, 1100);        
         }
         else{
-            $('#div_to_scroll').animate({scrollLeft : "-=" + quadScrollstr}, 'slow');    
+            $('#div_to_scroll').animate({scrollLeft : "-=" + quadScrollstr}, 1100);    
         }
         e.preventDefault();
     });
