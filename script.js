@@ -12,7 +12,7 @@ function isEventSupported(eventName) {
 
 $(document).ready(function() {
     var wheelEvent = isEventSupported('mousewheel') ? 'mousewheel' : 'wheel';
-    $('#div_to_scroll').on(wheelEvent, function(e) {
+    $('body').on(wheelEvent, function(e) {
         
         if($('#div_to_scroll').is(':animated'))
         {
