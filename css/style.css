@@ -22,7 +22,7 @@ section{
 footer{
 	height: 10%;
 	width: 100%;
-	background-color: green;
+	padding-top:30px;
 }
 
 img{
@@ -132,7 +132,7 @@ img{
 .slide-text-wrapper{
 	z-index: 2;
 	position: absolute;
-	top:10%;
+	top:8%;
 	left:7%;
 }
 .slide-title{
@@ -146,6 +146,40 @@ img{
 	font-size: 25px;
 }
 
+
+#slide4-right-text{
+	z-index: 2;
+	position: absolute;
+	top: 0px;
+	right:0;
+	width:50%;
+	height: 100%;
+	background-color: white;
+	opacity: 0.7;
+	display: none;
+}
+
+#slide4-right-text p{
+	position: absolute;
+	top:calc(8% + 147px);
+	left: 14%;
+	font-size: 25px;
+	opacity: 1;
+}
+
+#slide4-right-text-toggle{
+	z-index: 2;
+	position: absolute;
+	right:calc(50% + 15px);
+	bottom: 15px;
+	width: 40px;
+	height: 40px;
+	border:1px solid #252525;
+    -moz-box-shadow: 0 0 10px #999;
+    -webkit-box-shadow: 0 0 10px #999;
+	box-shadow: 0 0 10px #999;
+}
+
 .slide6-text-wrapper{
 	z-index: 2;
 	position: absolute;
@@ -156,7 +190,7 @@ img{
 }
 
 .nav-dots-wrapper{
-	z-index: 2;
+	z-index: 3;
 	position: absolute;
 	right:15px;
 	bottom: 15px;
@@ -181,4 +215,9 @@ img{
 
 .selected{
 	background-color: black !important; 
+}
+
+.circle:not(.selected):hover{
+	background-color: grey;
+	cursor:pointer;
 }

@@ -35,3 +35,15 @@
 	margin-left: 2.5em;
 	margin-top: 1.5em;
 }
+
+
+.footer-right{
+	padding:0;
+	margin: 0;
+	float:right;
+}
+.footer-left{
+	padding:0;
+	margin: 0;
+	float:left;
+}

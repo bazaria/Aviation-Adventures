@@ -54,5 +54,11 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-
+    $('#slide4-right-text-toggle').click(function(){
+        if($('#slide4-right-text').is(':animated'))
+        {
+            return false;
+        }
+        $('#slide4-right-text').slideToggle(1000);
+    });
 });
