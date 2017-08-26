@@ -190,7 +190,16 @@ img{
 	transform:rotate(270deg);
     -moz-box-shadow: 0 0 10px #999;
     -webkit-box-shadow: 0 0 10px #999;
-	box-shadow: 0 0 10px #999;
+		box-shadow: 0 0 10px #999;
+    -moz-transition:1s all;
+    -webkit-transition:1s all;
+		transition: 1s all;
+}
+
+.arrowDown{
+		transform: rotate(90deg) !important;
+    -moz-transform:rotate(90deg) !important;
+    -webkit-transform:rotate(90deg) !important;
 }
 
 .slide6-text-wrapper{

@@ -53,13 +53,13 @@ $(document).ready(function() {
         switch_to(tempIndex);
         e.preventDefault();
     });
-
     $('#slide4-right-text-toggle').click(function(){
         if($('#slide4-right-text').is(':animated'))
         {
             return false;
         }
         $('#slide4-right-text').slideToggle(1000);
-        $('#slide4-right-text-toggle').animate({rotate:'180deg'},1000);
-    });
+
+        $('#slide4-right-text-toggle').toggleClass("arrowDown");
+      });
 });
