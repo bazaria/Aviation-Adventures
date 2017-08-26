@@ -1,31 +1,46 @@
 
 #navbar_list {
-	text-transform: uppercase;
-	font-family:roboto;
-	float: right;
-	margin-right: 1.5em;
-	list-style-type: none;
-	margin-top: -3.25em;
+		text-transform: uppercase;
+		font-family:roboto;
+		float: right;
+		margin-right: 1.5em;
+		list-style-type: none;
+		margin-top: -3.25em;
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 0;
+		background-color: blue;
+		text-align: center;
+		overflow-x: hidden;
 }
 
-#navbar_list li {
-	text-align: center;
-	display: inline;
-}
+#navbar_list a {
 
-#navbar_list li a {
-	
     color: #000;
     padding: 8px 12px;
     text-decoration: none;
-	display: inline-block;
-	font-size: 1em;
-	font-weight: 600;
+		display: block;
+		font-size: 1em;
+		font-weight: 600;
 }
 
-#navbar_list li a:hover {
+#navbar_list a:hover {
     color: #fff;
-	background-color: #266fc0;
+		background-color: #266fc0;
+}
+
+.header_right{
+	width: 100%;
+	float:right;
+}
+
+.book_now_button{
+	background-color: #0198E1;
+	color:white;
+	margin-top:calc(50% - 15px);
+	font-size: 30px;
 }
 
 .sitelogo

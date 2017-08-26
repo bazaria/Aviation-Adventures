@@ -52,7 +52,8 @@ $(document).ready(function() {
         }
         switch_to(tempIndex);
         e.preventDefault();
-    });
+        $('#div_to_scroll').clearQueue();
+      });
     $('#slide4-right-text-toggle').click(function(){
         if($('#slide4-right-text').is(':animated'))
         {
