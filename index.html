@@ -10,18 +10,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="script.js"></script>
+	<script src="scripts/QTransform.js"></script>
 </head>
 
 <body>
 
 <header>
-	<div class="col-lg-2"></div>
-	<div class="container">
+	<div class="page-width">
 		<a href="index.html">
 			<img class="sitelogo" src="img/logo2.png" alt="Aviation Adventures">
 		</a>
-	</div>
-	<div class="container">
 		<nav class="mainnav">
 			<ul id="navbar_list">
 				<li><a href="#">WHAT IS IT</a> </li>
@@ -32,16 +30,15 @@
 			</ul>
 		</nav>
 	</div>
-	<div class="col-lg-2"></div>
 </header>
 
 <section>
-	
-	<div class="slides-container-container container nopadding" id="div_to_scroll">	
+
+	<div class="page-width slides-container-container nopadding" id="div_to_scroll">
 	<div class = "slides-container">
 
-	
-		<div class = "slide-container container nopadding">
+
+		<div class = "slide-container container col-lg-2 nopadding">
 		<div class="slide" id="slide1">
 			<img class="background-image" src="img/croppedmain.jpg"/>
 			<div class = "slide1-text-wrapper">
@@ -57,9 +54,9 @@
         	</div></div>
         </div>
         </div>
-  
-    	
-		<div class = "slide-container container nopadding">
+
+
+		<div class = "slide-container container col-lg-2 nopadding">
         <div class="slide" id="slide2">
         	<img class="background-image" src="img/cropped2.jpg"/>
         	<div class="slide-text-wrapper">
@@ -88,7 +85,7 @@
         </div>
 
 
-        <div class = "slide-container container nopadding">
+        <div class = "slide-container container col-lg-2 nopadding">
         <div class="slide" id="slide3">
           <img class="background-image" src="img/cropped3.jpg"/>
           <div class="slide-text-wrapper">
@@ -117,7 +114,7 @@
         </div>
 
 
-        <div class = "slide-container container nopadding">
+        <div class = "slide-container container col-lg-2 nopadding">
         <div class="slide" id="slide4">
           <img class="background-image" src="img/cropped4.jpg"/>
           <div class="slide-text-wrapper">
@@ -136,6 +133,8 @@
           	<div id="slide4-right-text-toggle">
 
           	</div>
+
+
           <div class="nav-dots-wrapper">
         		<div class= "circle" onclick="switch_to(1)">
         		</div>
@@ -154,7 +153,7 @@
         </div>
 
 
-        <div class = "slide-container container nopadding">
+        <div class = "slide-container container col-lg-2 nopadding">
         <div class="slide" id="slide5">
         	<img class="background-image" src="img/cropped5.jpg"/>
         	<div class="slide-text-wrapper">
@@ -179,7 +178,7 @@
         </div>
         </div>
 
-        <div class = "slide-container container nopadding">
+        <div class = "slide-container container col-lg-2 nopadding">
         <div class="slide" id="slide6">
          	<img class="background-image" src="img/cropped6.jpg"/>
 
@@ -201,12 +200,12 @@
         		</div>
         	</div>
         </div>
-        </div>	
-       </div> 
+        </div>
+       </div>
     </div>
 </section>
 <footer>
-	<div class="container nopadding">
+	<div class="page-width nopadding">
 	<div class="footer-left">
 		<p class="text">
 		footer left text

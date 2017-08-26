@@ -60,5 +60,6 @@ $(document).ready(function() {
             return false;
         }
         $('#slide4-right-text').slideToggle(1000);
+        $('#slide4-right-text-toggle').animate({rotate:'180deg'},1000);
     });
 });
