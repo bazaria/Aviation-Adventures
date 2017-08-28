@@ -43,6 +43,7 @@ img{
 .slides-container-container{
     white-space: nowrap;
     overflow-x: hidden;
+		overflow-y: hidden;
     -moz-box-shadow: 0 0 40px #999;
     -webkit-box-shadow: 0 0 40px #999;
 		box-shadow: 0 0 40px #999;
@@ -149,9 +150,9 @@ img{
 }
 
 .slide-body-text{
-	margin-top: 30px;
+	margin-top: 25px;
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 22px;
 }
 
 
@@ -169,9 +170,9 @@ img{
 
 #slide4-right-text p{
 	position: absolute;
-	top:calc(8% + 147px);
+	top:calc(8% + 142px);
 	left: 14%;
-	font-size: 25px;
+	font-size: 22px;
 	opacity: 1;
 }
 

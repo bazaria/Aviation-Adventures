@@ -28,6 +28,7 @@ function switch_to(index){
 
 $(document).ready(function() {
     var wheelEvent = isEventSupported('mousewheel') ? 'mousewheel' : 'wheel';
+    $('body').unbind('scroll');
     $('body').on(wheelEvent, function(e) {
         if($('#div_to_scroll').is(':animated'))
         {
@@ -52,7 +53,6 @@ $(document).ready(function() {
         }
         switch_to(tempIndex);
         e.preventDefault();
-        $('#div_to_scroll').clearQueue();
       });
     $('#slide4-right-text-toggle').click(function(){
         if($('#slide4-right-text').is(':animated'))
