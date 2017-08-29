@@ -146,7 +146,7 @@ img{
 }
 .slide-title{
 	text-transform: uppercase;
-	font-size: 36px;
+	font-size: 32px;
 }
 
 .slide-body-text{
@@ -177,13 +177,14 @@ img{
 	width:50%;
 	height: 100%;
 	background-color: white;
-	opacity: 0.7;
+	opacity: 0.85;
 	display: none;
+
 }
 
 #slide4-right-text p{
 	position: absolute;
-	top:calc(8% + 125px);
+	top:calc(8% + 118px);
 	left: 14%;
 	font-size: 14px;
 	opacity: 1;
@@ -193,18 +194,15 @@ img{
 	z-index: 2;
 	position: absolute;
 	right:calc(50% + 15px);
-	bottom: 15px;
-	width: 25px;
-	height: 25px;
+	bottom: 10px;
+	width: 35px;
+	height: 35px;
 	background-image: url("../img/play.png");
 	background-repeat: no-repeat;
-	background-size: 20px 20px;
+	background-size: 35px 35px;
 	background-position: center center;
 	border:1px solid #ffffff;
 	transform:rotate(270deg);
-    -moz-box-shadow: 0 0 10px #999;
-    -webkit-box-shadow: 0 0 5px #999;
-		box-shadow: 0 0 5px #999;
     -moz-transition:1s all;
     -webkit-transition:1s all;
 		transition: 1s all;
