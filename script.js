@@ -59,7 +59,7 @@ $(document).ready(function() {
         {
             return false;
         }
-        $('#slide4-right-text').slideToggle(1000);
+        $('#slide4-right-text').slideToggle(500);
 
         $('#slide4-right-text-toggle').toggleClass("arrowDown");
       });
