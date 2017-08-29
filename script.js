@@ -8,7 +8,7 @@ function isEventSupported(eventName) {
     }
     el = null;
     return isSupported;
-}
+};
 
 var slideIndex = 1;
 
@@ -23,12 +23,11 @@ function switch_to(index){
     var newLocation = amountPerSlide*(index-1);
     slideIndex = index;
     $('#div_to_scroll').animate({scrollLeft : newLocation}, 1100);
-}
+};
 
 
 $(document).ready(function() {
     var wheelEvent = isEventSupported('mousewheel') ? 'mousewheel' : 'wheel';
-    $('body').unbind('scroll');
     $('body').on(wheelEvent, function(e) {
         if($('#div_to_scroll').is(':animated'))
         {
@@ -59,7 +58,7 @@ $(document).ready(function() {
         {
             return false;
         }
-        $('#slide4-right-text').slideToggle(500);
+        $('#slide4-right-text').slideToggle(1000,'easeInExpo');
 
         $('#slide4-right-text-toggle').toggleClass("arrowDown");
       });
