@@ -32,15 +32,31 @@
 }
 
 .header_right{
-	width: 100%;
-	float:right;
+	height: 64px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	overflow-y: hidden;
+	text-align: center;
+}
+
+.open_menu{
+		color:#1172c3;
+		font-size: 40px;
 }
 
 .book_now_button{
-	background-color: #0198E1;
-	color:white;
-	margin-top:calc(50% - 15px);
-	font-size: 30px;
+		background-color: #1172c3;
+		color:white;
+		font-size: 19px;
+		height: 40px;
+		border: 0;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+}
+.book_now_button:hover{
+	cursor: pointer;
 }
 
 .sitelogo
