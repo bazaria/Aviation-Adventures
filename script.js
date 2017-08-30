@@ -24,7 +24,6 @@ function switch_to(index){
     slideIndex = index;
     $('#div_to_scroll').animate({scrollLeft : newLocation}, 900,'swing',function(){
       $('#div_to_scroll').stop(true);
-      $('#div_to_scroll').animate({scrollLeft : newLocation}, 600);
     });
 };
 
@@ -36,10 +35,12 @@ $(document).ready(function() {
         {
             return false;
         }
+        e.preventDefault();
         var oEvent = e.originalEvent,
-            delta  = oEvent.deltaY || oEvent.wheelDelta;
+            delta = e.deltaY;
+            //delta  = oEvent.deltaY || oEvent.wheelDelta;
         var tempIndex = slideIndex;
-        if(delta > 0)
+        if(delta < 0)
         {
             if(slideIndex < 6)
             {
@@ -54,7 +55,6 @@ $(document).ready(function() {
             }
         }
         switch_to(tempIndex);
-        e.preventDefault();
       });
     $('#slide4-right-text-toggle').click(function(){
         if($('#slide4-right-text').is(':animated'))
