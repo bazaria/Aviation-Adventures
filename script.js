@@ -24,6 +24,7 @@ function switch_to(index){
     slideIndex = index;
     $('#div_to_scroll').animate({scrollLeft : newLocation}, 900,'swing',function(){
       $('#div_to_scroll').stop(true);
+      $('#div_to_scroll').animate({scrollLeft : newLocation}, 600);
     });
 };
 
