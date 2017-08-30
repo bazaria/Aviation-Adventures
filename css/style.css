@@ -6,14 +6,15 @@ html * {
 	padding: 0;
 }
 body {
-	background:white;
+	background-color: #f2f2f2 !important;
 	height: 100%;
+
 }
 header{
 	width: 100%;
 	height: 20%;
 	top:56px;
-	background-color: white;
+		background-color: #f2f2f2 !important;
 }
 section{
 	padding-top: 15px;

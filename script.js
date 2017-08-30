@@ -22,8 +22,9 @@ function switch_to(index){
     var amountPerSlide = maxScrollLeft/5;
     var newLocation = amountPerSlide*(index-1);
     slideIndex = index;
-    $('#div_to_scroll').animate({scrollLeft : newLocation}, 1100,'swing',function(){
+    $('#div_to_scroll').animate({scrollLeft : newLocation}, 600,'swing',function(){
       $('#div_to_scroll').stop(true);
+      $('#div_to_scroll').animate({scrollLeft : newLocation}, 800);
     });
 };
 
