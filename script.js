@@ -30,7 +30,7 @@ function switch_to(index){
 
 
 $(document).ready(function() {
-    var wheelEvent = isEventSupported('mousewheel') ? 'mousewheel' : 'wheel';
+    var wheelEvent = 'mousewheel';//isEventSupported('mousewheel') ? 'mousewheel' : 'wheel';
     $('body').on(wheelEvent, function(e) {
         if($('#div_to_scroll').is(':animated'))
         {
