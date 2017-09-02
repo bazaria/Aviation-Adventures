@@ -30,7 +30,7 @@ function switch_to(index){
 
 
 $(document).ready(function() {
-    var wheelEvent = 'mousewheel';//isEventSupported('mousewheel') ? 'mousewheel' : 'wheel';
+    var wheelEvent = isEventSupported('mousewheel') ? 'mousewheel' : 'wheel';
     $('body').on(wheelEvent, function(e) {
         if($('#div_to_scroll').is(':animated'))
         {
@@ -38,10 +38,10 @@ $(document).ready(function() {
         }
         e.preventDefault();
         var oEvent = e.originalEvent,
-            delta = e.deltaY;
-            //delta  = oEvent.deltaY || oEvent.wheelDelta;
+            //delta = e.deltaY;
+            delta  = oEvent.deltaY || oEvent.wheelDelta;
         var tempIndex = slideIndex;
-        if(delta < 0)
+        if(delta > 0)
         {
             if(slideIndex < 6)
             {
