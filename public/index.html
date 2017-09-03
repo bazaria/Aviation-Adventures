@@ -4,6 +4,7 @@
 <head>
 
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Авиационные Приключения</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/header.css">
@@ -21,13 +22,13 @@
   <div class="book_lightbox_content" id="book_lightbox_content">
     <span class="close" id="close_lightbox">&times;</span>
 		<div class="container form_wrapper">
-		  <form action="/action_page.php">
+		  <form id="order_form">
 
 		    <label for="fname">Full Name</label>
 		    <input type="text" id="fname" name="fullname" placeholder="Your Name..">
 
 		    <label for="lname">E-mail Address</label>
-		    <input type="text" id="email" name="emailaddress" placeholder="Your E-mail Address..">
+		    <input type="email" id="email" name="emailaddress" placeholder="Your E-mail Address..">
 
 		    <label for="select_adventure">Select Adventure</label>
 		    <select id="select_adventure" name="select_adventure">
@@ -45,24 +46,19 @@
   </div>
 </div>
 
-		<div id="navbar_list">
-			<a href="#">WHAT IS IT</a>
-			<a href="#">WHY DO I NEED IT</a>
-			<a href="#">I WANT IT</a>
-			<a href="#">Q & A</a>
-			<a href="#">CONTACTS</a>
-		</div>
 <header>
 	<div class="page-width">
-		<a href="index.html">
+		<div class="row">
+		<div class="col-md-4 col-xs-12">
+			<a href="/">
 			<img class="sitelogo" src="img/logo2.png" alt="Aviation Adventures">
 		</a>
-		<div class="header_right">
+		</div>
+		<div class="col-md-4 col-md-offset-4 col-xs-12 header_right">
 			<button class="text book_now_button" id="book_now_button">
 				Забронируйте сейчас
 			</button>
-			<!-- <i class="fa fa-bars fa-3x open_menu">
-			</i> -->
+		</div>
 		</div>
 	</div>
 </header>
@@ -74,7 +70,7 @@
 	<div class = "slides-container">
 
 
-		<div class = "slide-container container col-lg-2 nopadding">
+		<div class = "container slide-container nopadding">
 		<div class="slide" id="slide1">
 			<img class="background-image" src="img/croppedmain.jpg"/>
 			<div class = "slide1-text-wrapper">
@@ -106,7 +102,7 @@
         </div>
 
 
-		<div class = "slide-container container col-lg-2 nopadding">
+		<div class = "container slide-container nopadding">
         <div class="slide" id="slide2">
         	<img class="background-image" src="img/cropped2.jpg"/>
         	<div class="slide-text-wrapper">
@@ -165,7 +161,7 @@
         </div>
 
 
-        <div class = "slide-container container col-lg-2 nopadding">
+        <div class = "container slide-container nopadding">
         <div class="slide" id="slide3">
           <img class="background-image" src="img/cropped3.jpg"/>
           <div class="slide-text-wrapper">
@@ -223,7 +219,7 @@
         </div>
 
 
-        <div class = "slide-container container col-lg-2 nopadding">
+        <div class = "container slide-container nopadding">
         <div class="slide" id="slide4">
           <img class="background-image" src="img/cropped4.jpg"/>
           <div class="slide-text-wrapper">
@@ -314,7 +310,7 @@
         </div>
 
 
-        <div class = "slide-container container col-lg-2 nopadding">
+        <div class = "container slide-container nopadding">
         <div class="slide" id="slide5">
         	<img class="background-image" src="img/cropped5.jpg"/>
         	<div class="slide-text-wrapper">
@@ -339,7 +335,7 @@
         </div>
         </div>
 
-        <div class = "slide-container container col-lg-2 nopadding">
+        <div class = "container slide-container nopadding">
         <div class="slide" id="slide6">
          	<img class="background-image" src="img/cropped6.jpg"/>
 

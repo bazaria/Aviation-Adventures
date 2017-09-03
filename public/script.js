@@ -82,4 +82,16 @@ $(document).ready(function() {
             modal.css('display','none');
         }
     });
+    $('#order_form').on("submit",function(){
+        var url = "/order";
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $('#order_form').serialize(),
+            success: function(data){
+                alert(data);
+            }
+        });
+        return false;
+    });
 });

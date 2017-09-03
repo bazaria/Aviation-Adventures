@@ -1,43 +1,11 @@
 
-#navbar_list {
-		text-transform: uppercase;
-		font-family:roboto;
-		float: right;
-		margin-right: 1.5em;
-		list-style-type: none;
-		margin-top: -3.25em;
-		position: fixed;
-		top: 0;
-		right: 0;
-		height: 100%;
-		width: 0;
-		background-color: blue;
-		text-align: center;
-		overflow-x: hidden;
-}
-
-#navbar_list a {
-
-    color: #000;
-    padding: 8px 12px;
-    text-decoration: none;
-		display: block;
-		font-size: 1em;
-		font-weight: 600;
-}
-
-#navbar_list a:hover {
-    color: #fff;
-		background-color: #266fc0;
-}
-
 .header_right{
-	height: 64px;
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	overflow-y: hidden;
 	text-align: center;
+	height: 100%;
 }
 
 .open_menu{
@@ -47,15 +15,17 @@
 .book_now_button{
 		background-color: #167cdb;
 		color:white;
-		font-size: 12px;
-		height: 30px;
-		width: 180px;
+		width: 90%;
+		font-size: 1vw;
+		padding-top: 15px;
+		padding-bottom: 12px;
+		height: auto;
 		border: 0;
 		-moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-		margin-top: 15px;
-		margin-right: 15px;
+    	-webkit-border-radius: 2px;
+    	border-radius: 2px;
+    	float:right;
+		margin: 10% 5% 10px 5%;
 		text-transform: uppercase;
 		font-family: sans-serif;
 	}
@@ -70,10 +40,9 @@
 
 .sitelogo
 {
-	width: 256px;
+	width: 100%;
 	height: auto;
 	margin-left: 15px;
-	margin-top: 1.5em;
 	padding-top: 10px;
 }
 
@@ -87,4 +56,107 @@
 	padding:0;
 	margin-left: 15px;
 	float:left;
+}
+
+
+.book_lightbox{
+	display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.book_lightbox_content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding-right: 4px;
+}
+
+	.close:hover,
+	.close:focus {
+	    color: black;
+	    text-decoration: none;
+	    cursor: pointer;
+	}
+
+.form_wrapper{
+	width: 100% !important;
+}
+
+input[type=text], input[type=email], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #167cdb;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+		text-transform: uppercase;
+		font-weight: 800;
+		margin-top: 20px;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+	cursor: pointer;
+	-webkit-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.44);
+	-moz-box-shadow:    0px 1px 6px 0px rgba(50, 50, 50, 0.44);
+	box-shadow:         0px 1px 6px 0px rgba(50, 50, 50, 0.44);
+}
+
+@media only screen and (max-width: 992px){
+	.book_now_button{
+		float:none;
+		margin-top: 10px;
+		width: 70%;
+		font-size: 3vw;
+		padding-top: 12px;
+		padding-bottom: 10px;
+		height: auto;
+	}
+	.book_lightbox_content {
+
+		width: 80%;
+	}
+	.footer_right{
+		float:none;
+		margin: auto;
+	}
+	.sitelogo{
+		margin-left: 0;
+	}
+}
+
+@media only screen and (max-width: 992px) and (min-width: 760px){
+	.book_now_button{
+		font-size: 22px !important;
+	}
 }
