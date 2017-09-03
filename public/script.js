@@ -68,7 +68,7 @@ $(document).ready(function() {
       });
 
     var modal = $('#book_lightbox');
-    
+
     $('#book_now_button').click(function(){
         modal.css('display','block');
     });

@@ -23,21 +23,20 @@
 		<div class="container form_wrapper">
 		  <form action="/action_page.php">
 
-		    <label for="fname">First Name</label>
-		    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+		    <label for="fname">Full Name</label>
+		    <input type="text" id="fname" name="fullname" placeholder="Your Name..">
 
-		    <label for="lname">Last Name</label>
-		    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+		    <label for="lname">E-mail Address</label>
+		    <input type="text" id="email" name="emailaddress" placeholder="Your E-mail Address..">
 
-		    <label for="country">Country</label>
-		    <select id="country" name="country">
-		      <option value="australia">Australia</option>
-		      <option value="canada">Canada</option>
-		      <option value="usa">USA</option>
+		    <label for="select_adventure">Select Adventure</label>
+		    <select id="select_adventure" name="select_adventure">
+			    <option value="none">none</option>
+		      <option value="europe">Central Europe - Spring 2018</option>
+		      <option value="eastcoast">East Coast - Summer 2018</option>
+		      <option value="nordic">Nordic Countries - Summer 2018</option>
 		    </select>
 
-		    <label for="subject">Subject</label>
-		    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
 		    <input type="submit" value="Submit">
 
@@ -62,8 +61,8 @@
 			<button class="text book_now_button" id="book_now_button">
 				Забронируйте сейчас
 			</button>
-			<i class="fa fa-bars fa-3x open_menu">
-			</i>
+			<!-- <i class="fa fa-bars fa-3x open_menu">
+			</i> -->
 		</div>
 	</div>
 </header>
