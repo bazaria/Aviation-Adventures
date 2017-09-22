@@ -67,21 +67,38 @@ $(document).ready(function() {
         $('#slide4-right-text-toggle').toggleClass("arrowDown");
       });
 
-    var modal = $('#book_lightbox');
+    var modal1 = $('#book_lightbox');
 
     $('#book_now_button').click(function(){
-        modal.css('display','block');
+        modal1.css('display','block');
     });
 
     $('#close_lightbox').click(function(){
-        modal.css('display','none');
+        modal1.css('display','none');
     });
-
+    var modal2=$('#gallery_modal');
+    
     $(window).click(function(e){
-        if(e.target.id == modal.attr('id')){
-            modal.css('display','none');
+        if(e.target.id == modal1.attr('id')){
+            modal1.css('display','none');
+        }
+        if(e.target.id == modal2.attr('id')){
+            modal2.css('display','none');
         }
     });
+
+    var modal_image=$('#gallery_modal_image');
+    var modal_caption=$('#gallery_modal_caption');
+
+    function set_modal(img){
+        modal2.css('display','block');
+        modal_image.attr('src',img.attr('src'));
+        modal_caption.html(img.attr('alt'));
+    }
+
+    $('#gallery_image1').click(function(){set_modal($('#gallery_img1'));});
+    $('#gallery_image2').click(function(){set_modal($('#gallery_img2'));});
+    $('#gallery_image3').click(function(){set_modal($('#gallery_img3'));});
     $('#order_form').on("submit",function(){
         var url = "/order";
         $.ajax({

@@ -2,14 +2,14 @@
 <html lang="en-US">
 
 <head>
-
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Авиационные Приключения</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/gallery.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="scripts/jquery.easing.1.3.js"></script>
 	<script src="scripts/jquery.mousewheel.js"></script>
@@ -17,371 +17,386 @@
 </head>
 
 <body>
+	<div id="book_lightbox" class="book_lightbox">
+		<div class="book_lightbox_content" id="book_lightbox_content">
+			<span class="close" id="close_lightbox">&times;</span>
+			<div class="container form_wrapper">
+				<form id="order_form">
+					<label for="fname">Full Name</label>
+					<input type="text" id="fname" name="fullname" placeholder="Your Name..">
 
-<div id="book_lightbox" class="book_lightbox">
-  <div class="book_lightbox_content" id="book_lightbox_content">
-    <span class="close" id="close_lightbox">&times;</span>
-		<div class="container form_wrapper">
-		  <form id="order_form">
+					<label for="lname">E-mail Address</label>
+					<input type="email" id="email" name="emailaddress" placeholder="Your E-mail Address..">
 
-		    <label for="fname">Full Name</label>
-		    <input type="text" id="fname" name="fullname" placeholder="Your Name..">
+					<label for="select_adventure">Select Adventure</label>
+					<select id="select_adventure" name="select_adventure">
+						<option value="none">none</option>
+						<option value="europe">Central Europe - Spring 2018</option>
+						<option value="eastcoast">East Coast - Summer 2018</option>
+						<option value="nordic">Nordic Countries - Summer 2018</option>
+					</select>
 
-		    <label for="lname">E-mail Address</label>
-		    <input type="email" id="email" name="emailaddress" placeholder="Your E-mail Address..">
-
-		    <label for="select_adventure">Select Adventure</label>
-		    <select id="select_adventure" name="select_adventure">
-			    <option value="none">none</option>
-		      <option value="europe">Central Europe - Spring 2018</option>
-		      <option value="eastcoast">East Coast - Summer 2018</option>
-		      <option value="nordic">Nordic Countries - Summer 2018</option>
-		    </select>
-
-
-		    <input type="submit" value="Submit">
-
-		  </form>
-		</div>
-  </div>
-</div>
-
-<header>
-	<div class="page-width">
-		<div class="row">
-		<div class="col-md-4 col-xs-12">
-			<a href="/">
-			<img class="sitelogo" src="img/logo2.png" alt="Aviation Adventures">
-		</a>
-		</div>
-		<div class="col-md-4 col-md-offset-4 col-xs-12 header_right">
-			<button class="text book_now_button" id="book_now_button">
-				Забронируйте сейчас
-			</button>
-		</div>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
 		</div>
 	</div>
-</header>
+	
+	<header>
+		<div class="page-width">
+			<div class="row">
+				<div class="col-md-4 col-xs-12">
+					<a href="/">
+						<img class="sitelogo" src="img/logo2.png" alt="Aviation Adventures">
+					</a>
+				</div>
+				<div class="col-md-4 col-md-offset-4 col-xs-12 header_right">
+					<button class="text book_now_button" id="book_now_button">
+						Забронируйте сейчас
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
 
-<section>
+	<section>
 
-	<div class="page-width slides-container-container nopadding" id="div_to_scroll">
+		<div class="page-width slides-container-container nopadding" id="div_to_scroll">
 
-	<div class = "slides-container">
-
-
-		<div class = "container slide-container nopadding">
-		<div class="slide" id="slide1">
-			<img class="background-image" src="img/croppedmain.jpg"/>
-			<div class = "slide1-text-wrapper">
-			<h1 class="text">
-				<span> Полёты над самыми красивыми</span>
-			</h1>
-
-      <h1 class="text">
-			<span>местами планеты.</span>
-		  </h1>
-
-			<h1 class="text">
-					<span> Впечатления, которые останутся с Вами</span>
-		  </h1>
-
-      <h1 class="text">
-		 <span> на всю жизнь.</span>
-		  </h1>
-
-        	</div>
-        	<div class="slide1-info-wrapper">
-        		<div class="slide1-info-textwrapper">
-        		<p class="text">ПРОКРУТИТЕ, ЧТОБЫ УЗНАТЬ БОЛЬШЕ</p>
-        		</div>
-        		<div class="slide1-info-alert-imagewrapper">
-        	<img class="slide1-info-alert" src="img/exclamationmark.png"/>
-        	</div></div>
-        </div>
-        </div>
+			<div class = "slides-container">
 
 
-		<div class = "container slide-container nopadding">
-        <div class="slide" id="slide2">
-        	<img class="background-image" src="img/cropped2.jpg"/>
-        	<div class="slide-text-wrapper">
-          		<h1 class="slide-title text">
-          			ЧТО ЭТО?
-        		</h1>
-        		<p class="slide-body-text text">
-							Авиационные приключения - совместные
-							<br>
-							полёты на 4-х местном самолёте
-							<br>
-							Cessna 172 / Cirrus 22
-							<br>
-							в самых красивых уголках планеты.
-							<br>
-							<br>
-							Мы увидим невероятные пейзажи,
-							<br>
-							доступные только с воздуха,
-							<br>
-							будем совместно готовиться к
-							<br>
-							полётам, выбирать маршрут,
-							<br>
-							анализировать погоду, делать
-							<br>
-							чек-листы ...
-							<br>
-							<br>
-							Авиационные приключения -
-							<br>
-							возможность не только насладиться
-							<br>
-							красотой нашей планеты, но и узнать из
-							<br>
-							первых рук и влюбиться в не менее
-							<br>
-							прекрасный мир авиации.
-        		</p>
-        	</div>
-        	<div class="nav-dots-wrapper">
-        		<div class= "circle" onclick="switch_to(1)">
-        		</div>
-        		<div class= "circle selected" onclick="switch_to(2)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(3)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(4)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(5)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(6)">
-        		</div>
-        	</div>
-        </div>
-        </div>
+				<div class = "container slide-container nopadding">
+					<div class="slide" id="slide1">
+						<img class="background-image" src="img/croppedmain.jpg"/>
+						<div class = "slide1-text-wrapper">
+							<h1 class="text">
+								<span> Полёты над самыми красивыми</span>
+							</h1>
+
+							<h1 class="text">
+								<span>местами планеты.</span>
+							</h1>
+
+							<h1 class="text">
+								<span> Впечатления, которые останутся с Вами</span>
+							</h1>
+
+							<h1 class="text">
+								<span> на всю жизнь.</span>
+							</h1>
+
+						</div>
+						<div class="slide1-info-wrapper">
+							<div class="slide1-info-textwrapper">
+								<p class="text">ПРОКРУТИТЕ, ЧТОБЫ УЗНАТЬ БОЛЬШЕ</p>
+							</div>
+							<div class="slide1-info-alert-imagewrapper">
+								<img class="slide1-info-alert" src="img/exclamationmark.png"/>
+							</div></div>
+						</div>
+					</div>
 
 
-        <div class = "container slide-container nopadding">
-        <div class="slide" id="slide3">
-          <img class="background-image" src="img/cropped3.jpg"/>
-          <div class="slide-text-wrapper">
-          	<h1 class="slide-title text">
-          		КОМУ ЭТО НУЖНО?
-          		</h1>
-          	<ul class="slide-body-text text">
-
-							<li>Тем, кто любит природу,
-							<br>
-							виды и романтику
-							<br>
-							<br>
-							<li>Тем, кого не устраивает
-							<br>
-							"стандартный" туризм
-							<br>
-							<br>
-							<li>Тем, кто испытывает
-							<br>
-							психологический дискомфорт
-							<br>
-							в полетах и хотел бы
-							<br>
-							от него избавиться
-							<br>
-							<br>
-							<li>Тем, кто "болеет"
-							<br>
-							авиацией и мечтает
-							<br>
-							стать частью процесса
-							<br>
-							<br>
-							<li>Тем, кто хочет впечатлений,
-							<br>
-							остающихся  на всю жизнь
-          	</ul>
-          	</div>
-          	<div class="nav-dots-wrapper">
-        		<div class= "circle" onclick="switch_to(1)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(2)">
-        		</div>
-        		<div class= "circle selected" onclick="switch_to(3)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(4)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(5)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(6)">
-        		</div>
-        	</div>
-        </div>
-        </div>
-
-
-        <div class = "container slide-container nopadding">
-        <div class="slide" id="slide4">
-          <img class="background-image" src="img/cropped4.jpg"/>
-          <div class="slide-text-wrapper">
-          	<h1 class="slide-title text">
-          		ГДЕ, КОГДА <br> И КАК?
-          		</h1>
-          	<p class="slide-body-text text">
-							Мы организуем несколько приключений
-							<br>
-							каждый год. В группе 3 человека и
-							<br>
-							профессиональный пилот.
-							<br>
-							Приключения занимают от 1 до 5
-							<br>
-							дней, в зависимости от маршрута.
-							<br>
-							Группа собирается в городе вылета.
-							<br>
-							Знакомимся и обсуждаем планы.
-							<br>
-							Анализируем прогноз погоды и
-							<br>
-							принимаем окончательное решение
-							<br>
-							о вылете.
-							<br>
-							Если все ок с погодой, на следующий
-							<br>
-							день готовим самолёт, проводим
-							<br>
-							брифинг и вылетаем на первый
-							<br>
-							сегмент маршрута.
-          	</p>
-          	</div>
-          	<div id="slide4-right-text">
-          		<p class="text">
-								Кроме восторга от красот природы
-								<br>
-								и неба, В полёте мы узнаем многое
-								<br>
-								об авиации, нормах обеспечения
-								<br>
-								безопасности и даже учимся основам
-								<br>
-								пилотирования и навигации.
-								<br>
-								Как правило, в день мы летаем
-								<br>
-								около 3-х часов , остальное время
-								<br>
-								отдыхаем, вкусно едим, изучаем
-								<br>
-								местные достопримечательности и
-								<br>
-								просто - наслаждаемся жизнью).
-								<br>
-								Кстати, наш опыт предыдущих
-								<br>
-								приключений показывает, что
-								<br>
-								участники каждого остаются
-								<br>
-								друзьями и после его окончания.
-          		</p>
-          	</div>
-          	<div id="slide4-right-text-toggle">
-
-          	</div>
+					<div class = "container slide-container nopadding">
+						<div class="slide" id="slide2">
+							<img class="background-image" src="img/cropped2.jpg"/>
+							<div class="slide-text-wrapper">
+								<h1 class="slide-title text">
+									ЧТО ЭТО?
+								</h1>
+								<p class="slide-body-text text">
+									Авиационные приключения - совместные
+									<br>
+									полёты на 4-х местном самолёте
+									<br>
+									Cessna 172 / Cirrus 22
+									<br>
+									в самых красивых уголках планеты.
+									<br>
+									<br>
+									Мы увидим невероятные пейзажи,
+									<br>
+									доступные только с воздуха,
+									<br>
+									будем совместно готовиться к
+									<br>
+									полётам, выбирать маршрут,
+									<br>
+									анализировать погоду, делать
+									<br>
+									чек-листы ...
+									<br>
+									<br>
+									Авиационные приключения -
+									<br>
+									возможность не только насладиться
+									<br>
+									красотой нашей планеты, но и узнать из
+									<br>
+									первых рук и влюбиться в не менее
+									<br>
+									прекрасный мир авиации.
+								</p>
+							</div>
+							<div class="nav-dots-wrapper">
+								<div class= "circle" onclick="switch_to(1)">
+								</div>
+								<div class= "circle selected" onclick="switch_to(2)">
+								</div>
+								<div class= "circle" onclick="switch_to(3)">
+								</div>
+								<div class= "circle" onclick="switch_to(4)">
+								</div>
+								<div class= "circle" onclick="switch_to(5)">
+								</div>
+								<div class= "circle" onclick="switch_to(6)">
+								</div>
+							</div>
+						</div>
+					</div>
 
 
-          <div class="nav-dots-wrapper">
-        		<div class= "circle" onclick="switch_to(1)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(2)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(3)">
-        		</div>
-        		<div class= "circle selected" onclick="switch_to(4)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(5)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(6)">
-        		</div>
-        	</div>
-        </div>
-        </div>
+					<div class = "container slide-container nopadding">
+						<div class="slide" id="slide3">
+							<img class="background-image" src="img/cropped3.jpg"/>
+							<div class="slide-text-wrapper">
+								<h1 class="slide-title text">
+									КОМУ ЭТО НУЖНО?
+								</h1>
+								<ul class="slide-body-text text">
+
+									<li>Тем, кто любит природу,
+										<br>
+										виды и романтику
+										<br>
+										<br>
+										<li>Тем, кого не устраивает
+											<br>
+											"стандартный" туризм
+											<br>
+											<br>
+											<li>Тем, кто испытывает
+												<br>
+												психологический дискомфорт
+												<br>
+												в полетах и хотел бы
+												<br>
+												от него избавиться
+												<br>
+												<br>
+												<li>Тем, кто "болеет"
+													<br>
+													авиацией и мечтает
+													<br>
+													стать частью процесса
+													<br>
+													<br>
+													<li>Тем, кто хочет впечатлений,
+														<br>
+														остающихся  на всю жизнь
+													</ul>
+												</div>
+												<div class="nav-dots-wrapper">
+													<div class= "circle" onclick="switch_to(1)">
+													</div>
+													<div class= "circle" onclick="switch_to(2)">
+													</div>
+													<div class= "circle selected" onclick="switch_to(3)">
+													</div>
+													<div class= "circle" onclick="switch_to(4)">
+													</div>
+													<div class= "circle" onclick="switch_to(5)">
+													</div>
+													<div class= "circle" onclick="switch_to(6)">
+													</div>
+												</div>
+											</div>
+										</div>
 
 
-        <div class = "container slide-container nopadding">
-        <div class="slide" id="slide5">
-        	<img class="background-image" src="img/cropped5.jpg"/>
-        	<div class="slide-text-wrapper">
-          		<h1 class="slide-title text">
-          			ГАЛЕРЕЯ
-          		</h1>
-          	</div>
-        	<div class="nav-dots-wrapper">
-        		<div class= "circle" onclick="switch_to(1)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(2)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(3)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(4)">
-        		</div>
-        		<div class= "circle selected" onclick="switch_to(5)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(6)">
-        		</div>
-        	</div>
-        </div>
-        </div>
+										<div class = "container slide-container nopadding">
+											<div class="slide" id="slide4">
+												<img class="background-image" src="img/cropped4.jpg"/>
+												<div class="slide-text-wrapper">
+													<h1 class="slide-title text">
+														ГДЕ, КОГДА <br> И КАК?
+													</h1>
+													<p class="slide-body-text text">
+														Мы организуем несколько приключений
+														<br>
+														каждый год. В группе 3 человека и
+														<br>
+														профессиональный пилот.
+														<br>
+														Приключения занимают от 1 до 5
+														<br>
+														дней, в зависимости от маршрута.
+														<br>
+														Группа собирается в городе вылета.
+														<br>
+														Знакомимся и обсуждаем планы.
+														<br>
+														Анализируем прогноз погоды и
+														<br>
+														принимаем окончательное решение
+														<br>
+														о вылете.
+														<br>
+														Если все ок с погодой, на следующий
+														<br>
+														день готовим самолёт, проводим
+														<br>
+														брифинг и вылетаем на первый
+														<br>
+														сегмент маршрута.
+													</p>
+												</div>
+												<div id="slide4-right-text">
+													<p class="text">
+														Кроме восторга от красот природы
+														<br>
+														и неба, В полёте мы узнаем многое
+														<br>
+														об авиации, нормах обеспечения
+														<br>
+														безопасности и даже учимся основам
+														<br>
+														пилотирования и навигации.
+														<br>
+														Как правило, в день мы летаем
+														<br>
+														около 3-х часов , остальное время
+														<br>
+														отдыхаем, вкусно едим, изучаем
+														<br>
+														местные достопримечательности и
+														<br>
+														просто - наслаждаемся жизнью).
+														<br>
+														Кстати, наш опыт предыдущих
+														<br>
+														приключений показывает, что
+														<br>
+														участники каждого остаются
+														<br>
+														друзьями и после его окончания.
+													</p>
+												</div>
+												<div id="slide4-right-text-toggle">
 
-        <div class = "container slide-container nopadding">
-        <div class="slide" id="slide6">
-         	<img class="background-image" src="img/cropped6.jpg"/>
+												</div>
 
-        	<div class="slide6-text-wrapper">
-          		<p class="slide-body-text-bio text">
-								Группу ведёт коммерческий пилот лицензии
-								<br>
-								ЕС + США, психолог, специалист по страху полёта
-								<br>
-								(аэрофобии) с международным именем -
-								<br>
-								Алексей Герваш.
-							</p>
-          	</div>
-          <div class="nav-dots-wrapper">
-        		<div class= "circle" onclick="switch_to(1)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(2)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(3)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(4)">
-        		</div>
-        		<div class= "circle" onclick="switch_to(5)">
-        		</div>
-        		<div class= "circle selected" onclick="switch_to(6)">
-        		</div>
-        	</div>
-        </div>
-        </div>
-       </div>
-    </div>
-</section>
-<footer>
-	<div class="page-width nopadding">
-	<div class="footer-left">
-		<p class="footer-text text">
-		All Rights Reserved To Aviation Adventures 2017
-		</p>
-	</div>
-	<div class="footer-right">
-		<p class="footer-text text">
-		Designed and built by Itay Garbash & Bar Azaria
-		</p>
-	</div>
-	</div>
-</footer>
-</body>
-</html>
+
+												<div class="nav-dots-wrapper">
+													<div class= "circle" onclick="switch_to(1)">
+													</div>
+													<div class= "circle" onclick="switch_to(2)">
+													</div>
+													<div class= "circle" onclick="switch_to(3)">
+													</div>
+													<div class= "circle selected" onclick="switch_to(4)">
+													</div>
+													<div class= "circle" onclick="switch_to(5)">
+													</div>
+													<div class= "circle" onclick="switch_to(6)">
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+										<div class = "container slide-container nopadding">
+											<div class="slide" id="slide5">
+												<img class="background-image" src="img/cropped5.jpg"/>
+												<div class="slide-text-wrapper">
+													<h1 class="slide-title text">
+														ГАЛЕРЕЯ
+													</h1>
+													</div>
+													<div class="gallery_wrapper">
+														<div class="gallery_image" id="gallery_image1">
+															<img src="img/example1.jpg" alt="Latvia, 2017" id="gallery_img1"/>
+														</div>
+														<div class="gallery_image" id="gallery_image2">
+															<img src="img/example1.jpg" alt="ALPS, 2017" id="gallery_img2"/>
+														</div>
+														<div class="gallery_image" id="gallery_image3">
+															<img src="img/example1.jpg" alt="West Coast, 2017" id="gallery_img3"/>
+														</div>
+														<a href="/gallery"><div class="gallery_image" id="full_gallery_button">
+															<img src="img/example1.jpg"/>
+
+														</div></a>
+													</div>
+												<div class="nav-dots-wrapper">
+													<div class= "circle" onclick="switch_to(1)">
+													</div>
+													<div class= "circle" onclick="switch_to(2)">
+													</div>
+													<div class= "circle" onclick="switch_to(3)">
+													</div>
+													<div class= "circle" onclick="switch_to(4)">
+													</div>
+													<div class= "circle selected" onclick="switch_to(5)">
+													</div>
+													<div class= "circle" onclick="switch_to(6)">
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class = "container slide-container nopadding">
+											<div class="slide" id="slide6">
+												<img class="background-image" src="img/cropped6.jpg"/>
+
+												<div class="slide6-text-wrapper">
+													<p class="slide-body-text-bio text">
+														Группу ведёт коммерческий пилот лицензии
+														<br>
+														ЕС + США, психолог, специалист по страху полёта
+														<br>
+														(аэрофобии) с международным именем -
+														<br>
+														Алексей Герваш.
+													</p>
+												</div>
+												<div class="nav-dots-wrapper">
+													<div class= "circle" onclick="switch_to(1)">
+													</div>
+													<div class= "circle" onclick="switch_to(2)">
+													</div>
+													<div class= "circle" onclick="switch_to(3)">
+													</div>
+													<div class= "circle" onclick="switch_to(4)">
+													</div>
+													<div class= "circle" onclick="switch_to(5)">
+													</div>
+													<div class= "circle selected" onclick="switch_to(6)">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<footer>
+								<div class="page-width nopadding">
+									<div class="footer-left">
+										<p class="footer-text text">
+											All Rights Reserved To Aviation Adventures 2017
+										</p>
+									</div>
+									<div class="footer-right">
+										<p class="footer-text text">
+											Designed and built by Itay Garbash & Bar Azaria
+										</p>
+									</div>
+								</div>
+							</footer>
+							<div id="gallery_modal" class="book_lightbox">
+							<span class="close2" onclick="document.getElementById('gallery_modal').style.display='none'">&times;</span>
+							<img class="gallery_modal_content" id="gallery_modal_image">
+							<div id="gallery_modal_caption"></div>
+						</body>
+						</html>

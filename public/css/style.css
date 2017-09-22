@@ -1,10 +1,45 @@
 /* CSS Document */
 
-html,
-html * {
+html{
 	margin: 0;
 	padding: 0;
+	font-size: 125%;
 }
+
+.page-width{
+	width:60%;
+	margin: 0 auto;
+	position: relative;
+}
+
+@media only screen and (max-width: 992px){
+
+	.page-width{
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 768px){
+		html{
+			font-size: 50%;
+		}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
+	html{
+		font-size: 75%;
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1170px){
+	html{
+		font-size: 100%;
+	}
+	.page-width{
+		width: 75%;
+	}
+}
+
 body {
 	background-color: #f2f2f2 !important;
 	height: 100%;
@@ -13,7 +48,7 @@ body {
 }
 
 header{
-        margin-top: 3%;
+    margin-top: 3%;
 	width: 100%;
 	height: 20%;
 	background-color: #f2f2f2 !important;
@@ -37,19 +72,6 @@ img{
 
 .nopadding {
    padding: 0 !important;
-}
-
-.page-width{
-	width:60%;
-	margin: 0 auto;
-	position: relative;
-}
-
-@media only screen and (max-width: 992px){
-
-	.page-width{
-		width: 90%;
-	}
 }
 
 
@@ -125,7 +147,7 @@ img{
 }
 
 .slide1-text-wrapper h1{
-	font-size: 28px;
+	font-size: 1.4rem;
 	text-align: center;
     text-transform: uppercase;
 	padding:0;
@@ -177,19 +199,19 @@ img{
 }
 .slide-title{
 	text-transform: uppercase;
-	font-size: 32px;
+	font-size: 1.6rem;
 }
 
 .slide-body-text{
 	margin-top: 30px;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 0.7rem;
 }
 
 .slide-body-text-bio{
 	margin-top: 30px;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 0.9rem;
 }
 
 
@@ -217,7 +239,7 @@ img{
 	position: absolute;
 	top:calc(8% + 118px);
 	left: 14%;
-	font-size: 14px;
+	font-size: 0.7rem;
 	opacity: 1;
 }
 
