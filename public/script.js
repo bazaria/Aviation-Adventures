@@ -88,12 +88,10 @@ $(document).ready(function() {
     });
 
     var modal_image=$('#gallery_modal_image');
-    var modal_caption=$('#gallery_modal_caption');
 
     function set_modal(img){
         modal2.css('display','block');
         modal_image.attr('src',img.attr('src'));
-        modal_caption.html(img.attr('alt'));
     }
 
     $('#gallery_image1').click(function(){set_modal($('#gallery_img1'));});
