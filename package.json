@@ -11,6 +11,9 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "ejs": "^2.5.7",
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "express-device": "^0.4.2",
+    "express-photo-gallery": "^1.0.9",
+    "nodemailer": "^4.1.0"
   }
 }
