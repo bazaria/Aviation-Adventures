@@ -12,15 +12,21 @@ function isEventSupported(eventName) {
 
 var slideIndex = 1;
 
+function calculateLocation(index){
+    var div_to_scroll = document.getElementById('div_to_scroll');
+    var maxScrollLeft = div_to_scroll.scrollWidth - div_to_scroll.clientWidth;
+    var amountPerSlide = maxScrollLeft/5;
+    return amountPerSlide*(index-1);
+    
+}
+
 function switch_to(index){
     if(index == slideIndex)
     {
         return;
     }
-    var div_to_scroll = document.getElementById('div_to_scroll');
-    var maxScrollLeft = div_to_scroll.scrollWidth - div_to_scroll.clientWidth;
-    var amountPerSlide = maxScrollLeft/5;
-    var newLocation = amountPerSlide*(index-1);
+    var newLocation = calculateLocation(index);
+
     slideIndex = index;
     $('#div_to_scroll').animate({scrollLeft : newLocation}, 900,'swing',function(){
       $('#div_to_scroll').stop(true);
@@ -86,7 +92,9 @@ $(document).ready(function() {
             modal2.css('display','none');
         }
     });
-
+    $(window).resize(function(){
+        $('#div_to_scroll').scrollLeft(calculateLocation(slideIndex));
+    });
     var modal_image=$('#gallery_modal_image');
 
     function set_modal(img){

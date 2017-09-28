@@ -46,16 +46,54 @@
 	padding-top: 15px;
 }
 
+.footer-wrapper{
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row nowrap;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-between;
+	-webit-justify-content: space-between;
+	align-items: center;
+	-webkit-align-items: center;
+}
 
 .footer-right{
 	padding:0;
 	margin-right: 15px;
-	float:right;
 }
+
+.social-media {
+	width: 30px;
+	height: 30px;
+	padding:6px;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	margin: 0 2px 10px 2px;
+}
+
+.social-media:hover{
+	opacity: 0.7;
+}
+
+.fa-facebook{
+	background-color: #3B5998;
+	color: white;
+}
+
+.fa-youtube{
+	background-color: #bb0000;
+	color: white;
+}
+
+.fa-instagram{
+	background-color: #125688;
+	color: white;
+}
+
 .footer-left{
 	padding:0;
 	margin-left: 15px;
-	float:left;
 }
 
 
@@ -145,10 +183,6 @@ input[type=submit]:hover {
 	.book_lightbox_content {
 
 		width: 80%;
-	}
-	.footer_right{
-		float:none;
-		margin: auto;
 	}
 	.sitelogo{
 		margin-left: 0;

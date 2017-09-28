@@ -14,11 +14,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-/*app.use(device.capture());
-device.enableDeviceHelpers(app);
+app.use(device.capture());
 
 
-
+/*
 app.set('views',__dirname + '/views');
 app.set('view engine', 'ejs');
 */
@@ -35,17 +34,33 @@ var transporter = nodemailer.createTransport({
 
 app.use('/gallery',gallery(path.join(__dirname,'gallery'),{title:"Gallery"}));
 
-app.get('/', (req, res) => {
+app.get('/', (req, res, next) => {
 	var options = {
-		root: path.join(__dirname,'public'),
-		headers: {
+		root: path.join(__dirname,'views'),
+		/*headers: {
+			'x-timestamp': Date.now(),
+			'x-sent': true
+		}*/
+	};
+	if(req.device.type === 'desktop'){
+		res.sendFile('index.html',options);
+	} else {
+		res.sendFile('index2.html',options);
+	}	
+	//res.render('index.ejs');
+});
+
+app.get('/mobile', (req, res, next) =>{
+	var options = {
+		root: path.join(__dirname,'views'),
+		/*headers: {
 			'x-timestamp': Date.now(),
 			'x-sent': true
 		}
-	};
-	res.sendFile('index.html',options);
-	//res.render('index.ejs');
-});
+	};*/
+	res.sendFile('index2.html',options);
+
+})
 
 app.post('/order', (req, res) => {
 	var mailOptions = {
