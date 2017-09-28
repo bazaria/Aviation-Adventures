@@ -56,8 +56,8 @@ app.get('/mobile', (req, res, next) =>{
 		/*headers: {
 			'x-timestamp': Date.now(),
 			'x-sent': true
-		}
-	};*/
+		}*/
+	};
 	res.sendFile('index2.html',options);
 
 })
