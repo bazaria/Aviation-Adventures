@@ -14,6 +14,7 @@ div{
 }
 .page-width{
 	width: 90%;
+	max-width: 1170px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -22,6 +23,7 @@ div{
 	width: 100%;
 	position: relative;
 }
+
 
 .first-background{
 	padding-top: 7%;
@@ -34,9 +36,10 @@ div{
 
 
 
-.content_wrapper{
+.content-wrapper{
 	width: 84%;
 	height: 100%;
+	overflow: auto;
 	z-index: 2;
 	position: absolute;
 	top: 0;
@@ -56,14 +59,15 @@ div{
 	position: relative;
 	width: 100%;
 	height: 45.36vw;
+	max-height: 530px;
 	background-color: #EBEBEB;
 }
 
-.flex1{
+#flex1{
 	margin-top: 34%;
 }
 
-.flex5{
+#flex5{
 	margin-bottom: 34%;
 }
 
@@ -72,4 +76,14 @@ h1{
 	text-align: center;
 	font-size: 6vw;
 	margin: 2%;
+}
+
+h2{
+	text-align: center;
+	font-size: 4vw;
+	margin-top:20%;
+}
+
+.slide-body-text{
+	display: none;
 }

@@ -3,36 +3,42 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 	<title>Авиационные Приключения</title>
 </head>
 <body>
 	<div class="page-width">
-		<div class="background-image-wrapper first-background">
+		<div class = "background-wrapper">
+		<div class="background-image-wrapper first-background" id="background1">
 			<img src="img/1.jpg">
 		</div>
-		<div class="background-image-wrapper">
+		<div class="background-image-wrapper" id="background2">
 			<img src="img/2.jpg">
 		</div>
-		<div class="background-image-wrapper">
+		<div class="background-image-wrapper" id="background3">
 			<img src="img/3.jpg">
 		</div>
-		<div class="background-image-wrapper">
+		<div class="background-image-wrapper" id="background4">
 			<img src="img/4.jpg">
 		</div>
-		<div class="background-image-wrapper">
+		<div class="background-image-wrapper" id="background5">
 			<img src="img/5.jpg">
 		</div>
-		<div class="background-image-wrapper">
+		<div class="background-image-wrapper" id="background6">
 			<img src="img/6.jpg">
 		</div>
-		<div class="content_wrapper">
-			<div class="slide-wrapper flex1">
+		</div>
+		<div class="content-wrapper">
+			<div class="slide-wrapper" onclick="toggleslide(1)" id="flex1">
 				<div class="slide1 slide">
 					<h1 class="slide-title text">
 						ЧТО ЭТО?
 					</h1>
-					<p class="slide-body-text text">
+					<h2 class="read-more" id="read-more1">
+						READ MORE
+					</h2>
+					<p class="slide-body-text text" id="slide-body-text1">
 						Авиационные приключения - совместные
 						<br>
 						полёты на 4-х местном самолёте
@@ -67,27 +73,35 @@
 					</p>
 				</div>
 			</div>
-			<div class="slide-wrapper">
+			<div class="slide-wrapper" id="flex2">
 				<div class="slide1 slide">
 
 				</div>
 			</div>
-			<div class="slide-wrapper">
+			<div class="slide-wrapper" id="flex3">
 				<div class="slide1 slide">
 
 				</div>
 			</div>
-			<div class="slide-wrapper">
+			<div class="slide-wrapper" id="flex4">
 				<div class="slide1 slide">
 
 				</div>
 			</div>
-			<div class="slide-wrapper flex5">
+			<div class="slide-wrapper" id="flex5">
 				<div class="slide1 slide">
 
 				</div>
 			</div>
 		</div>
 	</div>
+	<div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+  </div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="mobilescript.js"></script>
 </body>
 </html>
