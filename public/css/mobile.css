@@ -34,6 +34,23 @@ div{
 	position: relative;
 }
 
+.slide-title-text {
+	margin-top: 3vw;
+}
+
+.slide-body-text {
+	text-align: center;
+	font-family: roboto;
+	font-size: 3vw;
+
+}
+
+.short-slide-body-text{
+	text-align: center;
+	font-family: roboto;
+	font-size: 2.5vw;
+}
+
 
 
 .content-wrapper{
@@ -59,8 +76,11 @@ div{
 	position: relative;
 	width: 100%;
 	height: 45.36vw;
-	max-height: 530px;
 	background-color: #EBEBEB;
+}
+
+.fab-icon{
+	width: 100%
 }
 
 #flex1{
@@ -74,14 +94,16 @@ div{
 
 h1{
 	text-align: center;
-	font-size: 6vw;
-	margin: 2%;
+	font-size: 5vw;
+	margin: 5%;
+	font-weight: 800;
 }
 
 h2{
 	text-align: center;
-	font-size: 4vw;
-	margin-top:20%;
+	font-size: 2vw;
+	margin-top:5%;
+	color: #167cdb;
 }
 
 .slide-body-text{
