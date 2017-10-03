@@ -80,6 +80,10 @@ div{
 	background-color: #EBEBEB;
 }
 
+.fab-icon{
+	width: 100%
+}
+
 #flex1{
 	margin-top: 34%;
 }

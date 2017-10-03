@@ -3,18 +3,18 @@
 function toggleslide (slidenum) {
 	var stringnum = String(slidenum);
 	var nextstringnum = String(slidenum + 1);
-	
+
 	var slide = $('#flex' + stringnum);
 	var readmore = $('#read-more'+ stringnum);
 	var text = $('#slide-body-text' + stringnum);
 	var nextslide = $('#flex' + nextstringnum);
 	var nextbackground= $('#background' + nextstringnum);
-	
+
 	var isOpen = (readmore.css('display') == 'none');
 
 	var slideheight = parseInt(slide.height());
 	var backgroundmargin = parseInt(nextbackground.css('top'));
-	
+
 	var animationduration = 300;
 	if(!isOpen){
 		var newslideheight = slideheight*1.2;
