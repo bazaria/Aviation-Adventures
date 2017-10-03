@@ -34,6 +34,13 @@ div{
 	position: relative;
 }
 
+	/*.slide{
+text-align: center;
+}
+
+.text{
+	display: inline-block;
+}*/
 
 
 
@@ -62,6 +69,10 @@ div{
 	height: 45.36vw;
 	background-color: #EBEBEB;
 	cursor: pointer;
+-webkit-box-shadow: 0px 0px 41px 11px rgba(102,102,102,0.41);
+-moz-box-shadow: 0px 0px 41px 11px rgba(102,102,102,0.41);
+box-shadow: 0px 0px 41px 11px rgba(102,102,102,0.41);
+
 }
 
 .init-page{
@@ -83,22 +94,23 @@ div{
 .read-more{
 	text-align: center;
 	font-size: 2vw;
-	margin-top:5%;
+	padding-bottom: 1%;
+	margin-bottom: 1%;
 	color: #167cdb;
 }
 
 .slide-title {
-	margin-top: 3vw;
 	text-align: center;
 	font-size: 5vw;
-	margin: 5%;
+	margin: 3%;
 	font-weight: 800;
+	padding-top: 1%
 }
 
 .slide-body-text {
 	text-align: center;
 	font-family: roboto;
-	font-size: 3vw;
+	font-size: 2.5vw;
 	display: none;
 }
 
@@ -117,7 +129,7 @@ div{
 		font-size: 16px;
 	}
 	.slide-body-text{
-		font-size: 24px;
+		font-size: 20px;
 	}
 	.short-slide-body-text{
 		font-size: 20px;
@@ -126,4 +138,8 @@ div{
 
 .fab-icon{
 	width: 100%
+}
+
+#slide-title-5{
+	text-transform: uppercase;
 }
