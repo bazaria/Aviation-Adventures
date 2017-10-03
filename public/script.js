@@ -17,7 +17,7 @@ function calculateLocation(index){
     var maxScrollLeft = div_to_scroll.scrollWidth - div_to_scroll.clientWidth;
     var amountPerSlide = maxScrollLeft/5;
     return amountPerSlide*(index-1);
-    
+
 }
 
 function switch_to(index){
@@ -83,7 +83,7 @@ $(document).ready(function() {
         modal1.css('display','none');
     });
     var modal2=$('#gallery_modal');
-    
+
     $(window).click(function(e){
         if(e.target.id == modal1.attr('id')){
             modal1.css('display','none');
