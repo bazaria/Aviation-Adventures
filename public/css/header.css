@@ -79,18 +79,28 @@
 }
 
 .fa-facebook{
-	background-color: #3B5998;
-	color: white;
+	color: #136cdb;
 }
 
+.fa-facebook:hover{
+	color: #136cdb;
+}
+
+
 .fa-youtube{
-	background-color: #bb0000;
-	color: white;
+	color: #f44336;
+}
+
+.fa-youtube:hover{
+	color: #f44336;
 }
 
 .fa-instagram{
-	background-color: #125688;
-	color: white;
+	color: #9c27b0;
+}
+
+.fa-instagram:hover{
+	color: #9c27b0;
 }
 
 .footer-left{
