@@ -30,7 +30,7 @@ function toggleslide (slidenum) {
 		2:2,
 		3:2,
 		4:4,
-		5:2,
+		5:1.5,
 	}
 	slide.removeClass('init-page');
 	if(!isOpen){
