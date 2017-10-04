@@ -38,9 +38,7 @@ function toggleslide (slidenum) {
 		console.log(slideheight);
 		console.log(newslideheight);
 		slide.animate({height: String(newslideheight) + 'px'},animationduration);
-		$('#background' + nextstringnum).animate({marginTop: String(newslideheight - slideheight)  +'px'},animationduration,function(){
-					$('.content-wrapper').height($('body').height());
-			});
+		$('#background' + nextstringnum).animate({marginTop: String(newslideheight - slideheight)  +'px'},animationduration);
 
 		readmore.fadeToggle(animationduration/2, function(){
 			text.fadeToggle(animationduration/2);
@@ -48,16 +46,12 @@ function toggleslide (slidenum) {
 	}
 	else{
 		slide.animate({height: baseSlideHeight()},animationduration);
-			$('#background' + nextstringnum).animate({marginTop: '0px'},animationduration,function(){
-					$('.content-wrapper').height($('body').height());
-			});
+			$('#background' + nextstringnum).animate({marginTop: '0px'},animationduration);
 		text.fadeToggle(animationduration/2, function(){
 			readmore.fadeToggle(animationduration/2);
 		});
 	}
-	$('.content-wrapper').css('height','100%');
 }
-
 
 $(document).ready(function(){
 });
