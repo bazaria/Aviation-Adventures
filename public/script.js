@@ -73,11 +73,22 @@ $(document).ready(function() {
         $('#slide4-right-text-toggle').toggleClass("arrowDown");
       });
 
-    var modal1 = $('#book_lightbox');
+  //  var modal1 = $('#modal-container');
 
-    $('#book_now_button').click(function(){
-        modal1.css('display','block');
-    });
+  //  $('#book_now_button').click(function(){
+  //      modal1.css('display','block');
+  //  });
+
+  $('#book_now_button').click(function(){
+  var book_now_button = $(this).attr('book_now_button');
+  $('#modal-container').removeAttr('modal-container').addClass(book_now_button);
+  $('body').addClass('modal-active');
+})
+
+$('#modal-container').click(function(){
+  $(this).addClass('out');
+  $('body').removeClass('modal-active');
+});
 
     $('#close_lightbox').click(function(){
         modal1.css('display','none');
