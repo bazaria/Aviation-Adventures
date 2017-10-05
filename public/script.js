@@ -73,32 +73,27 @@ $(document).ready(function() {
         $('#slide4-right-text-toggle').toggleClass("arrowDown");
       });
 
-  //  var modal1 = $('#modal-container');
+     
 
-  //  $('#book_now_button').click(function(){
-  //      modal1.css('display','block');
-  //  });
+    var modal1 = $('#modal-container');
 
-  $('#book_now_button').click(function(){
-  var book_now_button = $(this).attr('book_now_button');
-  $('#modal-container').removeAttr('modal-container').addClass(book_now_button);
-  $('body').addClass('modal-active');
-})
+    $('#book_now_button').click(function(){
+        modal1.css('display','table');
+    });
 
-$('#modal-container').click(function(){
-  $(this).addClass('out');
-  $('body').removeClass('modal-active');
-});
-
-    $('#close_lightbox').click(function(){
-        modal1.css('display','none');
+    $('#book_now_button').click(function(){
+        $('#modal-container').removeAttr('class').addClass('two');
+        $('body').addClass('modal-active');
+    });
+    $('#modal-background').click(function(e){
+        if(!(e.target.id == $('.modal').attr('id') || $.contains($('#form-modal')[0], $('#'+ e.target.id)[0]))){
+            modal1.addClass('out');
+            $('body').removeClass('modal-active');
+        }
     });
     var modal2=$('#gallery_modal');
 
     $(window).click(function(e){
-        if(e.target.id == modal1.attr('id')){
-            modal1.css('display','none');
-        }
         if(e.target.id == modal2.attr('id')){
             modal2.css('display','none');
         }
