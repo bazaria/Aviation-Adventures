@@ -81,13 +81,13 @@ header{
 	text-align: center;
   	display: -webkit-flex;
   	-webkit-justify-content: center;
-  	-webkit-align-items: center; 
+  	-webkit-align-items: center;
   	display: -ms-flex;
   	-ms-justify-content: center;
-  	-ms-align-items: center; 
+  	-ms-align-items: center;
   	display: flex;
   	justify-content: center;
-  	align-items: center; 
+  	align-items: center;
 
 }
 
@@ -98,6 +98,9 @@ header{
 
 .init-page{
 	max-height: 349px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
 }
 
 
@@ -135,9 +138,9 @@ header{
 
 .read-more{
 	position: absolute;
-	bottom: 2%;
-	width: 7vw;
-	height: 7vw;
+	bottom: 5%;
+	width: 4vw;
+	height: 4vw;
 	max-height: 54px;
 	max-width: 54px;
 	cursor: pointer;
