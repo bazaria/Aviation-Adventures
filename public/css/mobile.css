@@ -49,17 +49,6 @@ header{
 }
 
 
-.gallery{
-	display: inline-block;
-	margin: 1vw;
-}
-
-.gallery-ext{
-	margin: 1vw;
-	display: none;
-}
-
-
 .content-wrapper{
 	width: 100%;
 	height: 100%;
@@ -86,7 +75,6 @@ header{
 	position: relative;
 	height: 45.36vw;
 	background-color: #EBEBEB;
-	cursor: pointer;
 	-webkit-box-shadow: 0px 0px 41px 11px rgba(102,102,102,0.41);
 	-moz-box-shadow: 0px 0px 41px 11px rgba(102,102,102,0.41);
 	box-shadow: 0px 0px 41px 11px rgba(102,102,102,0.41);
@@ -124,13 +112,6 @@ header{
 
 
 
-.read-more{
-	text-align: center;
-	font-size: 2vw;
-	padding-bottom: 1%;
-	color: #167cdb;
-}
-
 .slide-title {
 	text-align: center;
 	font-size: 5vw;
@@ -152,13 +133,36 @@ header{
 	font-size: 2.5vw;
 }
 
+.read-more{
+	position: absolute;
+	bottom: 2%;
+	width: 7vw;
+	height: 7vw;
+	max-height: 54px;
+	max-width: 54px;
+	cursor: pointer;
+	background-image: url("../img/play.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center center;
+    -moz-transform:rotate(90deg) !important;
+    -webkit-transform:rotate(90deg) !important;
+	transform:rotate(90deg);
+	-moz-transition:300ms all;
+	-webkit-transition:300ms all;
+	transition: 300ms all;
+}
+
+.arrowDown{
+	transform: rotate(270deg) !important;
+    -moz-transform:rotate(270deg) !important;
+    -webkit-transform:rotate(270deg) !important;
+}
+
 @media screen and (min-width : 770px){
 	.slide-title{
 		margin-top: 24px;
 		font-size: 40px;
-	}
-	.read-more{
-		font-size: 16px;
 	}
 	.slide-body-text{
 		font-size: 20px;
@@ -178,4 +182,30 @@ header{
 
 #alex{
 	width: 25%;
+}
+
+
+.gallery{
+	margin: 1vw;
+	display: inline-block;
+}
+
+.gallery-ext{
+	margin: 1vw;
+	display: none;
+}
+
+.gallery-img{
+	width: 25vw;
+	height: 25vw;
+	max-width: 192px;
+	max-height: 192px;
+}
+.gallery-img img{
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+}
+.slide4{
+	padding-bottom: 8%;
 }

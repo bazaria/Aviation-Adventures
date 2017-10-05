@@ -18,7 +18,7 @@ function toggleslide (slidenum) {
 	var nextslide = $('#flex' + nextstringnum);
 	var nextbackground= $('#background' + nextstringnum);
 
-	var isOpen = (readmore.css('display') == 'none');
+	var isOpen = !(text.css('display') == 'none');
 
 	var slideheight = parseInt(slide.height());
 	var backgroundmargin = parseInt(nextbackground.css('top'));
@@ -29,10 +29,18 @@ function toggleslide (slidenum) {
 		1:2,
 		2:2,
 		3:2,
-		4:4,
+		4:2.5,
 		5:1.5,
 	}
 	slide.removeClass('init-page');
+    readmore.toggleClass("arrowDown");
+	text.fadeToggle(animationduration);
+	if(slidenum === 4){
+		$('.gallery-ext').fadeToggle(animationduration,function(){
+			if ($(this).is(':visible'))
+        	$(this).css('display','inline-block');
+		});
+	}
 	if(!isOpen){
 		var newslideheight = slideheight*newSlidesSize[slidenum];
 		console.log(slideheight);
@@ -40,18 +48,18 @@ function toggleslide (slidenum) {
 		slide.animate({height: String(newslideheight) + 'px'},animationduration);
 		$('#background' + nextstringnum).animate({marginTop: String(newslideheight - slideheight)  +'px'},animationduration);
 
-		readmore.fadeToggle(animationduration/2, function(){
-			text.fadeToggle(animationduration/2);
-		});
 	}
 	else{
 		slide.animate({height: baseSlideHeight()},animationduration);
-			$('#background' + nextstringnum).animate({marginTop: '0px'},animationduration);
-		text.fadeToggle(animationduration/2, function(){
-			readmore.fadeToggle(animationduration/2);
-		});
+		$('#background' + nextstringnum).animate({marginTop: '0px'},animationduration);
 	}
 }
 
 $(document).ready(function(){
+	for(var i =1;i<6;i++)
+	{
+		$('#read-more'+String(i)).click(function(){
+			toggleslide(parseInt(this.id.slice(-1)));
+		});
+	}
 });
