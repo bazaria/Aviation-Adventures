@@ -342,26 +342,26 @@ ul{
 }
 #modal-container.two .modal-background {
   background: transparent;
-  animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: fadeIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 #modal-container.two .modal-background .modal {
   opacity: 0;
-  animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: scaleUp 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 #modal-container.two + .content {
-  animation: scaleBack 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: scaleBack 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 #modal-container.two.out {
-  animation: quickScaleDown 0s .5s linear forwards;
+  animation: quickScaleDown 0s .3s linear forwards;
 }
 #modal-container.two.out .modal-background {
-  animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: fadeOut 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 #modal-container.two.out .modal-background .modal {
-  animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: scaleDown 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 #modal-container.two.out + .content {
-  animation: scaleForward 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: scaleForward 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 
