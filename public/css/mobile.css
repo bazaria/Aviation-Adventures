@@ -113,14 +113,35 @@ header{
 	margin-bottom: 34%;
 }
 
+.slogen-wrapper{
+	margin: 0 auto;
+	display: inline-block;
+	z-index: 3;
+	position: absolute;
+	top:30%;
+	width: 100%;
+	text-align: center;
+}
 
+.slogen-wrapper h1{
+	margin:0;
+	font-size: 3vw;	
+	color:black;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 1% 0;
+}
+.slogen-wrapper h1 span{
+	background-color: white;
+	padding: 1% 2%;
+}
 
 .slide-title {
 	text-align: center;
 	font-size: 5vw;
 	margin: 3%;
 	font-weight: 800;
-	padding-top: 1%
+	padding-top: 1%;
 }
 
 .slide-body-text {
@@ -138,7 +159,8 @@ header{
 
 .read-more{
 	position: absolute;
-	bottom: 5%;
+	display: block;
+	bottom: 2vw;
 	width: 4vw;
 	height: 4vw;
 	max-height: 54px;
@@ -189,12 +211,12 @@ header{
 
 
 .gallery{
-	margin: 1vw;
+	margin: 2vw;
 	display: inline-block;
 }
 
 .gallery-ext{
-	margin: 1vw;
+	margin: 2vw;
 	display: none;
 }
 
@@ -231,5 +253,20 @@ header{
 @media screen and (min-width : 900px){
 	.book_modal{
 		padding: 35px 88px 35px 88px;
+	}
+	.slogen-wrapper h1{
+		font-size: 27px;
+	}
+	.read-more{
+		bottom: 15px;
+		width: 30px;
+		height: 30px;
+	}
+	
+	.gallery{
+		margin: 15px;
+	}
+	.gallery-ext{
+		margin: 15px;
 	}
 }

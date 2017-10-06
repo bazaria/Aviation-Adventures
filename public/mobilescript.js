@@ -33,6 +33,9 @@ function toggleslide (slidenum) {
 		5:1.5,
 	}
 	slide.removeClass('init-page');
+	slide.css('-moz-border-radius','3px');
+	slide.css('-webkit-border-radius','3px');
+	slide.css('border-radius','3px');
     readmore.toggleClass("arrowDown");
 	text.fadeToggle(animationduration);
 	if(slidenum === 4){
