@@ -118,7 +118,10 @@ $(document).ready(function() {
             url: url,
             data: $('#order_form').serialize(),
             success: function(data){
-                alert(data);
+                if(data != '0')
+                {
+                    alert(data);
+                }
             }
         });
         return false;

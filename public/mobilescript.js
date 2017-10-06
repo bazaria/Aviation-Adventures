@@ -62,4 +62,32 @@ $(document).ready(function(){
 			toggleslide(parseInt(this.id.slice(-1)));
 		});
 	}
+	$('#form-opener').click(function(){
+		$('#book-modal-container').css('display','block');
+	});
+	$('#close-form-button').click(function(){
+		$('#book-modal-container').css('display','none');
+	});
+	$(window).click(function(e){
+		if(e.target.id=="book-modal-container")
+		{
+			$('#book-modal-container').css('display','none');
+		}
+	});
+	$('#order_form').on("submit",function(){
+        var url = "/order";
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $('#order_form').serialize(),
+            success: function(data){
+            	if(data != '0')
+            	{
+                	alert(data);
+                }
+            }
+        });
+        return false;
+    });
+	$('select').material_select();
 });

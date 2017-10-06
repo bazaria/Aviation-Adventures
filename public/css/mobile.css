@@ -209,3 +209,25 @@ header{
 .slide4{
 	padding-bottom: 8%;
 }
+
+.modal-container{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.4);
+}
+.book_modal{
+	background-color: white;
+	padding: 4% 10% 4% 10%;
+	margin-top: 25vh;
+}
+@media screen and (min-width : 900px){
+	.book_modal{
+		padding: 35px 88px 35px 88px;
+	}
+}

@@ -63,18 +63,27 @@ app.get('/mobile', (req, res, next) =>{
 })
 
 app.post('/order', (req, res) => {
+	if(req.body.select_advanture == "none" || !req.body.emailaddress)
+	{
+		console.log(req.body.emailaddress);
+		res.send('0');
+		return;
+	}
 	var mailOptions = {
 		from: 'barA351@zoho.com',
 		to: 'barA351@zoho.com',
 		subject: 'hello bar',
 		text: JSON.stringify(req.body)
 	};
-
+	console.log(JSON.stringify(req.body));
+	console.log(Boolean(req.body));
 	transporter.sendMail(mailOptions,function(error,info){
 		if(error){
 			console.log(error);
+			res.send('1');
 		} else {
 			console.log("email: " + info.response);
+			res.send('2');
 		}
 	});
 });
