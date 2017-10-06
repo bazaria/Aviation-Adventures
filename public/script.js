@@ -73,7 +73,7 @@ $(document).ready(function() {
         $('#slide4-right-text-toggle').toggleClass("arrowDown");
       });
 
-     
+
 
     var modal1 = $('#modal-container');
 

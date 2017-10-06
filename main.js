@@ -26,11 +26,11 @@ var transporter = nodemailer.createTransport({
 	service: 'Zoho',
 	tls: { rejectUnauthorized: false},
 	auth:{
-		user: 'barA351@zoho.com',
-		pass: '1234zxcv'
+		user: 'aviationadventures@zoho.com',
+		pass: 'EnCt2593ab16'
 	}
 
-}); 
+});
 
 app.use('/gallery',gallery(path.join(__dirname,'gallery'),{title:"Gallery"}));
 
@@ -46,7 +46,7 @@ app.get('/', (req, res, next) => {
 		res.sendFile('index.html',options);
 	} else {
 		res.sendFile('index2.html',options);
-	}	
+	}
 	//res.render('index.ejs');
 });
 
@@ -70,10 +70,11 @@ app.post('/order', (req, res) => {
 		return;
 	}
 	var mailOptions = {
-		from: 'barA351@zoho.com',
-		to: 'barA351@zoho.com',
-		subject: 'hello bar',
-		text: JSON.stringify(req.body)
+		from: 'aviationadventures@zoho.com',
+		to: 'itay2108@gmail.com',
+		subject: 'New Aviation Adventures Signup Request',
+		text: "Dear alex,\n\n " + req.body.fullname + " wants to join your " + req.body.select_adventure + " adventure.\n\nYou can contact him at his email address -\n\n"
+		 + req.body.emailaddress + "\n\n\n\nGoodluck!"
 	};
 	console.log(JSON.stringify(req.body));
 	console.log(Boolean(req.body));
