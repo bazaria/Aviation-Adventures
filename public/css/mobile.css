@@ -125,7 +125,7 @@ header{
 
 .slogen-wrapper h1{
 	margin:0;
-	font-size: 3vw;	
+	font-size: 3vw;
 	color:black;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -262,11 +262,18 @@ header{
 		width: 30px;
 		height: 30px;
 	}
-	
+
 	.gallery{
 		margin: 15px;
 	}
 	.gallery-ext{
 		margin: 15px;
 	}
+}
+
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 10%;
+  left:7%;
 }

@@ -7,7 +7,7 @@ const gallery = require('express-photo-gallery');
 
 const app = express();
 
-app.set('port',3000);
+app.set('port',process.env.PORT);
 
 
 app.use(bodyParser.json());
@@ -71,7 +71,7 @@ app.post('/order', (req, res) => {
 	}
 	var mailOptions = {
 		from: 'aviationadventures@zoho.com',
-		to: 'itay2108@gmail.com',
+		to: 'bezfobiy@gmail.com',
 		subject: 'New Aviation Adventures Signup Request',
 		text: "Dear alex,\n\n " + req.body.fullname + " wants to join your " + req.body.select_adventure + " adventure.\n\nYou can contact him at his email address -\n\n"
 		 + req.body.emailaddress + "\n\n\n\nGoodluck!"

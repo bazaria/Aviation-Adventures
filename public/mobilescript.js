@@ -86,7 +86,13 @@ $(document).ready(function(){
             success: function(data){
             	if(data != '0')
             	{
-                	alert(data);
+								$('#book-modal-container').css('display','none');
+								if(data=="1"){
+									 Materialize.toast('Ошибка отправки электронной почты. Пожалуйста, повторите попытку позже.', 4000)
+								 }
+								else{
+								 Materialize.toast("Отправлено по электронной почте. С вами свяжутся в ближайшее время.", 4000)
+								}
                 }
             }
         });
