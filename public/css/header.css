@@ -15,17 +15,19 @@
 .book_now_button{
 		background-color: #167cdb;
 		color:white;
-		width: 90%;
-		font-size: 1vw;
-		padding-top: 15px;
-		padding-bottom: 12px;
-		height: auto;
+		width: 195px;
+		height: 35px;
+		/*width: 90%;*/
+		font-size: 0.75vw;
+		padding-top: 2px;
+		padding-bottom: 0px;
+		/*height: auto;*/
 		border: 0;
 		-moz-border-radius: 2px;
     	-webkit-border-radius: 2px;
     	border-radius: 2px;
     	float:right;
-		margin: 10% 5% 10px 5%;
+		margin: 10% 0% 10px 5%;
 		text-transform: uppercase;
 		font-family: sans-serif;
 	}
@@ -149,7 +151,7 @@
 
 
 input[type=text], input[type=email], select, textarea {
-    width: 100%; 
+    width: 100%;
     padding: 12px; /* Some padding */
     border: 1px solid #ccc; /* Gray border */
     border-radius: 4px; /* Rounded borders */
