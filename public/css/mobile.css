@@ -62,7 +62,7 @@ header{
 	-webkit-flex-flow: column nowrap;
 	-ms-flex-flow: column nowrap;
 	flex-flow: column nowrap;
-	-webit-justify-content: space-evenly;
+	-webkit-justify-content: space-evenly;
 	-ms-justify-content: space-evenly;
 	justify-content: space-evenly;
 	-webkit-align-items: center;
