@@ -7,7 +7,7 @@ const gallery = require('express-photo-gallery');
 
 const app = express();
 
-app.set('port',process.env.PORT);
+app.set('port',process.env.PORT || 3000);
 
 
 app.use(bodyParser.json());
