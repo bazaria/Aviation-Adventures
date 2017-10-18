@@ -99,11 +99,11 @@ ul{
 
 .slides-container{
 	font-size: 0;
-	width:600%;
+	width:700%;
 }
 
 .slide-container {
-	width: 16.66667% !important;
+	width: 14.285714% !important;
 	padding: 0;
 	margin: 0;
 	display: inline-block;
@@ -261,6 +261,26 @@ ul{
 #slide4-right-text-toggle:hover{
 	cursor: pointer;
 }
+
+
+.next-advanture-wrapper{
+	z-index: 3;
+	position: absolute;
+	bottom: 4%;
+	left:7%;
+	margin-top: 3%;
+	width: 28%;
+
+}
+
+.next-advanture{
+	width: 100%;
+	padding-top: 5%;
+}
+.next-advanture img{
+	width: 100%;
+}
+
 
 .arrowDown{
 		transform: rotate(90deg) !important;

@@ -30,7 +30,8 @@ function toggleslide (slidenum) {
 		2:2,
 		3:2,
 		4:2.5,
-		5:1.5,
+		5:3,
+		6:1.5,
 	}
 	slide.removeClass('init-page');
 	slide.css('-moz-border-radius','3px');
@@ -44,6 +45,11 @@ function toggleslide (slidenum) {
         	$(this).css('display','inline-block');
 		});
 	}
+
+	if(slidenum === 5){
+		$('.next-advanture').fadeToggle(animationduration);
+	}
+
 	if(!isOpen){
 		var newslideheight = slideheight*newSlidesSize[slidenum];
 		console.log(slideheight);
@@ -59,7 +65,7 @@ function toggleslide (slidenum) {
 }
 
 $(document).ready(function(){
-	for(var i =1;i<6;i++)
+	for(var i =1;i<7;i++)
 	{
 		$('#read-more'+String(i)).click(function(){
 			toggleslide(parseInt(this.id.slice(-1)));
@@ -99,4 +105,16 @@ $(document).ready(function(){
         return false;
     });
 	$('select').material_select();
+
+	$.ajax({
+		type: "GET",
+		url: "/advantures",
+		success: function(data){
+			var advantures = JSON.parse(data);
+			for(prop in advantures)
+			{
+				$('#advanture' + String(prop)).attr('src','next/' + advantures[prop] + '.png');
+			}
+		}
+	});
 });

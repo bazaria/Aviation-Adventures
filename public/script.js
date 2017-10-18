@@ -11,11 +11,13 @@ function isEventSupported(eventName) {
 };
 
 var slideIndex = 1;
+var SLIDESNUM = 7;
+
 
 function calculateLocation(index){
     var div_to_scroll = document.getElementById('div_to_scroll');
     var maxScrollLeft = div_to_scroll.scrollWidth - div_to_scroll.clientWidth;
-    var amountPerSlide = maxScrollLeft/5;
+    var amountPerSlide = maxScrollLeft/(SLIDESNUM - 1);
     return amountPerSlide*(index-1);
 
 }
@@ -34,6 +36,20 @@ function switch_to(index){
     });
 };
 
+function next_advantures_loader(){
+    $.ajax({
+		type: "GET",
+		url: "/advantures",
+		success: function(data){
+			var advantures = JSON.parse(data);
+			for(prop in advantures)
+			{
+				$('#advanture' + String(prop)).attr('src','next/' + advantures[prop] + '.png');
+			}
+		}
+	});
+}
+
 
 $(document).ready(function() {
     var wheelEvent = isEventSupported('mousewheel') ? 'mousewheel' : 'wheel';
@@ -49,7 +65,7 @@ $(document).ready(function() {
         var tempIndex = slideIndex;
         if(delta > 0)
         {
-            if(slideIndex < 6)
+            if(slideIndex < SLIDESNUM)
             {
                 tempIndex++;
             }
@@ -134,4 +150,5 @@ $(document).ready(function() {
         });
         return false;
     });
+    next_advantures_loader();
 });

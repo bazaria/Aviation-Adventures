@@ -34,6 +34,16 @@ var transporter = nodemailer.createTransport({
 
 app.use('/gallery',gallery(path.join(__dirname,'gallery'),{title:"Gallery"}));
 
+app.get('/advantures',(req, res) =>{
+	let advantures = {
+		1: 'france_2017_adventure',
+		2: 'westcoast_2018_adventure',
+		3: 'iceland_2018_adventure',
+		4: 'alps_2018_adventure',
+	}
+	res.send(JSON.stringify(advantures));
+});
+
 app.get('/', (req, res, next) => {
 	var options = {
 		root: path.join(__dirname,'views'),

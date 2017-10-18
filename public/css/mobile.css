@@ -119,7 +119,7 @@ header{
 	margin-top: 40%;
 }
 
-#flex5{
+#flex6{
 	margin-bottom: 40%;
 }
 
@@ -246,6 +246,21 @@ header{
 .slide4{
 	padding-bottom: 8%;
 }
+
+.next-advantures-wrapper{
+	width: 70%;
+	margin: 0 auto;
+}
+
+.next-advanture{
+	display: none;
+	width: 100%;
+	padding-top: 5%;
+}
+.next-advanture img{
+	width: 100%;
+}
+
 .modal-container{
 	display: none;
 	position: fixed;
