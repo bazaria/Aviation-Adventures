@@ -46,7 +46,7 @@ app.get('/advantures',(req, res) =>{
 
 app.get('/', (req, res, next) => {
 	var options = {
-		root: path.join(__dirname,'views'),
+		root: path.join(__dirname, 'views'),
 		/*headers: {
 			'x-timestamp': Date.now(),
 			'x-sent': true

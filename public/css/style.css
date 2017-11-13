@@ -269,14 +269,24 @@ ul{
 	bottom: 4%;
 	left:7%;
 	margin-top: 3%;
-	width: 28%;
+	width: 50%;
 
 }
 
 .next-advanture{
-	width: 100%;
-	padding-top: 5%;
+	width: 45%;
+	padding-top: 10%;
+	padding-bottom: 20%;
 }
+
+.right{
+	float: right;
+}
+
+.left{
+	float: left;
+}
+
 .next-advanture img{
 	width: 100%;
 }
