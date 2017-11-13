@@ -268,15 +268,15 @@ ul{
 	position: absolute;
 	bottom: 4%;
 	left:7%;
-	margin-top: 3%;
+	margin-top: -10%;
 	width: 50%;
 
 }
 
 .next-advanture{
 	width: 45%;
-	padding-top: 10%;
-	padding-bottom: 20%;
+	padding-top: 5%;
+	padding-bottom: 30%;
 }
 
 .right{
@@ -287,8 +287,23 @@ ul{
 	float: left;
 }
 
+.top{
+	margin-top: -15%;
+}
+
+.bottom{
+	margin-top: -20%;
+}
+
 .next-advanture img{
 	width: 100%;
+}
+
+.comingsoontext{
+	position: absolute;
+	margin-top: 50%;
+	margin-left: 50%;
+	z-index: 5;
 }
 
 
