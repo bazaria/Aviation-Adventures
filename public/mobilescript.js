@@ -64,6 +64,36 @@ function toggleslide (slidenum) {
 	}
 }
 
+
+function next_advantures_loader(){
+	
+	$.ajax({
+		type: "GET",
+		url: "/advantures",
+		success: function(data){
+			var advantures = JSON.parse(data);
+			for(prop in advantures)
+			{
+				$('#advanture' + String(prop)).attr('src','next/' + advantures[prop][0] + '.png').click(function(){
+                    open_contact_form(advantures[prop][1])   
+                });
+                $('#select_adventure').append($('<option>',{
+                    value: advantures[prop][1],
+                    text : advantures[prop][2],
+                }));
+			}
+		}
+	});
+}
+
+function open_contact_form(advanture){
+	$('#book-modal-container').css('display','block');
+	console.log(advanture);
+	$('#select_adventure').val(advanture);
+	$("#select_adventure").material_select();
+}
+
+
 $(document).ready(function(){
 	for(var i =1;i<7;i++)
 	{
@@ -72,7 +102,7 @@ $(document).ready(function(){
 		});
 	}
 	$('#form-opener').click(function(){
-		$('#book-modal-container').css('display','block');
+		open_contact_form('none');
 	});
 	$('#close-form-button').click(function(){
 		$('#book-modal-container').css('display','none');
@@ -106,15 +136,5 @@ $(document).ready(function(){
     });
 	$('select').material_select();
 
-	$.ajax({
-		type: "GET",
-		url: "/advantures",
-		success: function(data){
-			var advantures = JSON.parse(data);
-			for(prop in advantures)
-			{
-				$('#advanture' + String(prop)).attr('src','next/' + advantures[prop] + '.png');
-			}
-		}
-	});
+	next_advantures_loader()
 });

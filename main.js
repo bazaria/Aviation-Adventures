@@ -36,10 +36,10 @@ app.use('/gallery',gallery(path.join(__dirname,'gallery'),{title:"Gallery"}));
 
 app.get('/advantures',(req, res) =>{
 	let advantures = {
-		1: 'france_2017_adventure',
-		2: 'westcoast_2018_adventure',
-		3: 'iceland_2018_adventure',
-		4: 'alps_2018_adventure',
+		1: ['france_2017_adventure', 'europe', 'Франция - Ноябрь 2017'],
+		2: ['westcoast_2018_adventure', 'east coast','Восточное Побережие США - апрель 2018'],
+		3: ['iceland_2018_adventure', 'nordic', 'Прага - Май 2018'],
+		4: ['alps_2018_adventure', 'iceland', 'Исландия - Июль 2018'],
 	}
 	res.send(JSON.stringify(advantures));
 });

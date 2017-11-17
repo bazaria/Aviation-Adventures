@@ -1,3 +1,4 @@
+
 function isEventSupported(eventName) {
     var el = document.createElement('div');
     eventName = 'on' + eventName;
@@ -44,12 +45,24 @@ function next_advantures_loader(){
 			var advantures = JSON.parse(data);
 			for(prop in advantures)
 			{
-				$('#advanture' + String(prop)).attr('src','next/' + advantures[prop] + '.png');
+                $('#advanture' + String(prop)).attr('src','next/' + advantures[prop][0] + '.png').click(function(){
+                    open_contact_form(advantures[prop][1])   
+                });
+                $('#select_adventure').append($('<option>',{
+                    value: advantures[prop][1],
+                    text : advantures[prop][2],
+                }));
 			}
 		}
 	});
 }
 
+function open_contact_form(advanture){
+    $('#modal-container').css('display','table');
+    $('#modal-container').removeAttr('class').addClass('two');
+    $('body').addClass('modal-active');
+    $('#select_adventure').val(advanture);
+}
 
 $(document).ready(function() {
     var wheelEvent = isEventSupported('mousewheel') ? 'mousewheel' : 'wheel';
@@ -94,13 +107,9 @@ $(document).ready(function() {
     var modal1 = $('#modal-container');
 
     $('#book_now_button').click(function(){
-        modal1.css('display','table');
+        open_contact_form('none')        
     });
 
-    $('#book_now_button').click(function(){
-        $('#modal-container').removeAttr('class').addClass('two');
-        $('body').addClass('modal-active');
-    });
     $('#modal-background').click(function(e){
         if(!(e.target.id == $('.modal').attr('id') || $.contains($('#form-modal')[0], $('#'+ e.target.id)[0]))){
             modal1.addClass('out');
