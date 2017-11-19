@@ -37,6 +37,7 @@ function switch_to(index){
     });
 };
 
+
 function next_advantures_loader(){
     $.ajax({
 		type: "GET",
@@ -45,8 +46,10 @@ function next_advantures_loader(){
 			var advantures = JSON.parse(data);
 			for(prop in advantures)
 			{
-                $('#advanture' + String(prop)).attr('src','next/' + advantures[prop][0] + '.png').click(function(){
-                    open_contact_form(advantures[prop][1])   
+                var select_value = advantures[prop][1];
+                $('#advanture' + String(prop)).attr('src','next/' + advantures[prop][0] + '.png').click(function(e){
+                    console.log(e);
+                    open_contact_form(advantures[e.target.id[e.target.id.length - 1]][1]);
                 });
                 $('#select_adventure').append($('<option>',{
                     value: advantures[prop][1],
@@ -61,7 +64,7 @@ function open_contact_form(advanture){
     $('#modal-container').css('display','table');
     $('#modal-container').removeAttr('class').addClass('two');
     $('body').addClass('modal-active');
-    $('#select_adventure').val(advanture);
+    $('#select_adventure').val(advanture).change();
 }
 
 $(document).ready(function() {

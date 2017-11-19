@@ -74,8 +74,8 @@ function next_advantures_loader(){
 			var advantures = JSON.parse(data);
 			for(prop in advantures)
 			{
-				$('#advanture' + String(prop)).attr('src','next/' + advantures[prop][0] + '.png').click(function(){
-                    open_contact_form(advantures[prop][1])   
+				$('#advanture' + String(prop)).attr('src','next/' + advantures[prop][0] + '.png').click(function(e){
+                    open_contact_form(advantures[e.target.id[e.target.id.length - 1]][1]);
                 });
                 $('#select_adventure').append($('<option>',{
                     value: advantures[prop][1],
