@@ -32,7 +32,7 @@ function toggleslide (slidenum) {
 		4:2.5,
 		5:3,
 		6:1.5,
-	}
+	};
 	slide.removeClass('init-page');
 	slide.css('-moz-border-radius','3px');
 	slide.css('-webkit-border-radius','3px');
@@ -124,10 +124,10 @@ $(document).ready(function(){
             	{
 								$('#book-modal-container').css('display','none');
 								if(data=="1"){
-									 Materialize.toast('Ошибка отправки электронной почты. Пожалуйста, повторите попытку позже.', 4000)
+									 Materialize.toast('Ошибка отправки электронной почты. Пожалуйста, повторите попытку позже.', 4000);
 								 }
 								else{
-								 Materialize.toast("Отправлено по электронной почте. С вами свяжутся в ближайшее время.", 4000)
+								 Materialize.toast("Отправлено по электронной почте. С вами свяжутся в ближайшее время.", 4000);
 								}
                 }
             }
@@ -136,5 +136,5 @@ $(document).ready(function(){
     });
 	$('select').material_select();
 
-	next_advantures_loader()
+	next_advantures_loader();
 });

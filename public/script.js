@@ -9,7 +9,7 @@ function isEventSupported(eventName) {
     }
     el = null;
     return isSupported;
-};
+}
 
 var slideIndex = 1;
 var SLIDESNUM = 7;
@@ -35,7 +35,7 @@ function switch_to(index){
       $('#div_to_scroll').stop(true);
       $('#div_to_scroll').animate({scrollLeft : newLocation}, 600);
     });
-};
+}
 
 
 function next_advantures_loader(){
@@ -44,11 +44,10 @@ function next_advantures_loader(){
 		url: "/advantures",
 		success: function(data){
 			var advantures = JSON.parse(data);
-			for(prop in advantures)
+			for(var prop in advantures)
 			{
                 var select_value = advantures[prop][1];
                 $('#advanture' + String(prop)).attr('src','next/' + advantures[prop][0] + '.png').click(function(e){
-                    console.log(e);
                     open_contact_form(advantures[e.target.id[e.target.id.length - 1]][1]);
                 });
                 $('#select_adventure').append($('<option>',{
@@ -58,6 +57,28 @@ function next_advantures_loader(){
 			}
 		}
 	});
+}
+
+function gallery_loader(){
+    $.ajax({
+        type: "GET",
+        url: "/gallery",
+        success: function(data){
+            var gallery = JSON.parse(data);
+            gallery_names = Object.keys(gallery);
+            console.log(gallery);
+            for(var i=0; i< gallery_names.length; i++){
+                $('#gallery_img' + (i+1).toString())
+                    .prop('alt',gallery_names[i])
+                    .prop('src', gallery[gallery_names[i]][0].src)
+                    .on("click", {images: gallery}, function(e){
+                    var pswpElement = document.querySelectorAll('.pswp')[0];
+                    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, e.data.images[$(this).attr("alt")], {index: 0});
+                    gallery.init();
+                });
+            }
+        },
+    });
 }
 
 function open_contact_form(advanture){
@@ -110,7 +131,7 @@ $(document).ready(function() {
     var modal1 = $('#modal-container');
 
     $('#book_now_button').click(function(){
-        open_contact_form('none')        
+        open_contact_form('none');
     });
 
     $('#modal-background').click(function(e){
@@ -119,26 +140,9 @@ $(document).ready(function() {
             $('body').removeClass('modal-active');
         }
     });
-    var modal2=$('#gallery_modal');
-
-    $(window).click(function(e){
-        if(e.target.id == modal2.attr('id')){
-            modal2.css('display','none');
-        }
-    });
     $(window).resize(function(){
         $('#div_to_scroll').scrollLeft(calculateLocation(slideIndex));
     });
-    var modal_image=$('#gallery_modal_image');
-
-    function set_modal(img){
-        modal2.css('display','block');
-        modal_image.attr('src',img.attr('src'));
-    }
-
-    $('#gallery_image1').click(function(){set_modal($('#gallery_img1'));});
-    $('#gallery_image2').click(function(){set_modal($('#gallery_img2'));});
-    $('#gallery_image3').click(function(){set_modal($('#gallery_img3'));});
     $('#order_form').on("submit",function(){
         var url = "/order";
         $.ajax({
@@ -151,10 +155,10 @@ $(document).ready(function() {
                     modal1.addClass('out');
                     $('body').removeClass('modal-active');
                     if(data=="1"){
-                       Materialize.toast('Ошибка отправки электронной почты. Пожалуйста, повторите попытку позже.', 4000)
+                       Materialize.toast('Ошибка отправки электронной почты. Пожалуйста, повторите попытку позже.', 4000);
                      }
                     else{
-                     Materialize.toast("Отправлено по электронной почте. С вами свяжутся в ближайшее время.", 4000)
+                     Materialize.toast("Отправлено по электронной почте. С вами свяжутся в ближайшее время.", 4000);
                     }
 
                 }
@@ -162,5 +166,6 @@ $(document).ready(function() {
         });
         return false;
     });
+    gallery_loader();
     next_advantures_loader();
 });

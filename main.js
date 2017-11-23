@@ -3,7 +3,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const device = require('express-device');
-const gallery = require('express-photo-gallery');
+const fs = require('fs');
+const sizeOf = require('image-size');
 
 const app = express();
 
@@ -32,7 +33,30 @@ var transporter = nodemailer.createTransport({
 
 });
 
-app.use('/gallery',gallery(path.join(__dirname,'gallery'),{title:"Gallery"}));
+function setUpGallery(){
+	var photos = {};
+	let folders = fs.readdirSync(path.join(__dirname, 'public', 'gallery'));
+	for (let folder of folders){
+		photos[folder] = [];
+
+		let images = fs.readdirSync(path.join(__dirname,'public', 'gallery', folder));
+		console.log(images);
+		for (let image of images){
+			let dimentions = sizeOf(path.join(__dirname, 'public', 'gallery', folder, image)); 
+			photos[folder].push({
+				src: path.join('gallery', folder, image),
+				w: dimentions.width,
+				h: dimentions.height,
+			});
+		}
+	}
+	return photos;
+}
+
+const gallery = setUpGallery();
+app.get('/gallery', (req, res) =>{
+	res.send(JSON.stringify(gallery));
+}),
 
 app.get('/advantures',(req, res) =>{
 	let advantures = {
@@ -40,7 +64,7 @@ app.get('/advantures',(req, res) =>{
 		2: ['westcoast_2018_adventure', 'east coast','Восточное Побережие США - апрель 2018'],
 		3: ['alps_2018_adventure', 'nordic', 'Прага - Май 2018'],
 		4: ['iceland_2018_adventure', 'iceland', 'Исландия - Июль 2018'],
-	}
+	};
 	res.send(JSON.stringify(advantures));
 });
 
@@ -70,7 +94,7 @@ app.get('/mobile', (req, res, next) =>{
 	};
 	res.sendFile('index2.html',options);
 
-})
+});
 
 app.post('/order', (req, res) => {
 	if(req.body.select_advanture == "none" || !req.body.emailaddress)
