@@ -18,7 +18,7 @@ function toggleslide (slidenum) {
 	var nextslide = $('#flex' + nextstringnum);
 	var nextbackground= $('#background' + nextstringnum);
 
-	var isOpen = !(text.css('display') == 'none');
+	var isOpen = text.css('display') != 'none';
 
 	var slideheight = parseInt(slide.height());
 	var backgroundmargin = parseInt(nextbackground.css('top'));
@@ -29,7 +29,7 @@ function toggleslide (slidenum) {
 		1:2,
 		2:2,
 		3:2,
-		4:2.5,
+		4:2,
 		5:3,
 		6:1.5,
 	};
@@ -93,6 +93,27 @@ function open_contact_form(advanture){
 	$("#select_adventure").material_select();
 }
 
+function gallery_loader(){
+    $.ajax({
+        type: "GET",
+        url: "/gallery",
+        success: function(data){
+            var gallery = JSON.parse(data);
+            gallery_names = Object.keys(gallery);
+            console.log(gallery);
+            for(var i=0; i< gallery_names.length; i++){
+                $('#gallery_img' + (i+1).toString())
+                    .prop('alt',gallery_names[i])
+                    .prop('src', gallery[gallery_names[i]][0].src)
+                    .on("click", {images: gallery}, function(e){
+                    var pswpElement = document.querySelectorAll('.pswp')[0];
+                    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, e.data.images[$(this).attr("alt")], {index: 0});
+                    gallery.init();
+                });
+            }
+        },
+    });
+}
 
 $(document).ready(function(){
 	for(var i =1;i<7;i++)
@@ -137,4 +158,5 @@ $(document).ready(function(){
 	$('select').material_select();
 
 	next_advantures_loader();
+	gallery_loader();
 });

@@ -6,6 +6,8 @@
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="photoswipe/photoswipe.css">
+	<link rel="stylesheet" href="photoswipe/default-skin/default-skin.css">
 	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 	<title>Авиационные Приключения</title>
@@ -193,46 +195,25 @@
 					</h1>
 					<p class="slide-body-text text" id="slide-body-text4"></p>
 					<div class="gallery-ext">
-						<a target="_blank" href="img/example1.jpg">
-							<div class="gallery-img" id="gallery1">
-								<img src="img/example1.jpg">
-							</div>
-  						</a>
+						<div class="gallery-img" id="gallery1">
+							<img src="img/example1.jpg" id="gallery_img1">
+						</div>
 					</div>
 					<div class="gallery-ext">
-						<a target="_blank" href="img/example2.jpg">
-							<div class="gallery-img" id="gallery2">
-								<img src="img/example2.jpg">
-							</div>
-						</a>
+						<div class="gallery-img" id="gallery2">
+							<img src="img/example2.jpg" id="gallery_img2">
+						</div>
 					</div>
 					<div class="gallery-ext">
-						<a target="_blank" href="img/example3.jpg">
-							<div class="gallery-img" id="gallery3">
-								<img src="img/example3.jpg">
-							</div>
-						</a>
+						<div class="gallery-img" id="gallery3">
+							<img src="img/example3.jpg" id="gallery_img3">
+						</div>
 					</div>
 					<div class="gallery-ext">
-						<a target="_blank" href="img/example4.jpg">
-							<div class="gallery-img">
-								<img src="img/example4.jpg">
-							</div>
-						</a>
-					</div>
-					<div class="gallery-ext">
-						<a target="_blank" href="img/example5.jpg">
-							<div class="gallery-img" id="gallery4">
-								<img src="img/example5.jpg">
-							</div>
-						</a>
-					</div><div class="gallery-ext">
-						<a target="_blank" href="/gallery">
-							<div class="gallery-img">
-								<img src="img/viewmore_gallery.jpg">
-							</div>
-						</a>
-					</div>
+						<div class="gallery-img">
+							<img src="img/example4.jpg" id="gallery_img4">
+						</div>
+				</div>
 				</div>
 			</div>
 				<div class="read-more text" id="read-more4">
@@ -347,7 +328,78 @@
 		</div>
 	</footer>
 </div>
+
+		<!-- Root element of PhotoSwipe. Must have class pswp. -->
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+			
+				<!-- Background of PhotoSwipe. 
+					 It's a separate element as animating opacity is faster than rgba(). -->
+				<div class="pswp__bg"></div>
+			
+				<!-- Slides wrapper with overflow:hidden. -->
+				<div class="pswp__scroll-wrap">
+			
+					<!-- Container that holds slides. 
+						PhotoSwipe keeps only 3 of them in the DOM to save memory.
+						Don't modify these 3 pswp__item elements, data is added later on. -->
+					<div class="pswp__container">
+						<div class="pswp__item"></div>
+						<div class="pswp__item"></div>
+						<div class="pswp__item"></div>
+					</div>
+			
+					<!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+					<div class="pswp__ui pswp__ui--hidden">
+			
+						<div class="pswp__top-bar">
+			
+							<!--  Controls are self-explanatory. Order can be changed. -->
+			
+							<div class="pswp__counter"></div>
+			
+							<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+			
+							<button class="pswp__button pswp__button--share" title="Share"></button>
+			
+							<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+			
+							<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+			
+							<!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+							<!-- element will get class pswp__preloader--active when preloader is running -->
+							<div class="pswp__preloader">
+								<div class="pswp__preloader__icn">
+								  <div class="pswp__preloader__cut">
+									<div class="pswp__preloader__donut"></div>
+								  </div>
+								</div>
+							</div>
+						</div>
+			
+						<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+							<div class="pswp__share-tooltip"></div> 
+						</div>
+			
+						<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+						</button>
+			
+						<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+						</button>
+			
+						<div class="pswp__caption">
+							<div class="pswp__caption__center"></div>
+						</div>
+			
+					</div>
+			
+				</div>
+			
+			</div>
+
+			
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="photoswipe/photoswipe.min.js"></script>
+	<script src="photoswipe/photoswipe-ui-default.min.js"></script>
     <script type="text/javascript" src="scripts/materialize.min.js"></script>
 	<script src="mobilescript.js"></script>
 </body>

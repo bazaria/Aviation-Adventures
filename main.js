@@ -40,7 +40,6 @@ function setUpGallery(){
 		photos[folder] = [];
 
 		let images = fs.readdirSync(path.join(__dirname,'public', 'gallery', folder));
-		console.log(images);
 		for (let image of images){
 			let dimentions = sizeOf(path.join(__dirname, 'public', 'gallery', folder, image)); 
 			photos[folder].push({
