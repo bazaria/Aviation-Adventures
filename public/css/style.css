@@ -194,6 +194,7 @@ ul{
 	top:8%;
 	left:7%;
 }
+
 .slide-title{
 	text-transform: uppercase;
 	font-size: 1.6rem;
@@ -279,6 +280,10 @@ ul{
 	padding-bottom: 30%;
 }
 
+.next-advanture-img{
+	cursor: pointer;
+}
+
 .right{
 	float: right;
 }
@@ -301,9 +306,10 @@ ul{
 
 .comingsoontext{
 	position: absolute;
-	margin-top: 50%;
-	margin-left: 50%;
-	z-index: 5;
+	bottom: 15%;
+	left: 7%;
+	font-size: 0.7rem;
+	z-index: 10;
 }
 
 
