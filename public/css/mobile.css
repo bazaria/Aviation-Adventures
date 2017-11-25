@@ -249,6 +249,14 @@ header{
 	margin: 5px 0px 3px;
 	font-weight: bold;
 }
+
+.comingsoontext{
+	font-size: 0.5rem;
+	z-index: 10;
+	font-weight: 400;
+	margin-top: 10px;
+}
+
 .slide4{
 	padding-bottom: 8%;
 }
