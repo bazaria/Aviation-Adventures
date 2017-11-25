@@ -306,10 +306,11 @@ ul{
 
 .comingsoontext{
 	position: absolute;
-	bottom: 15%;
+	bottom: 10%;
 	left: 7%;
 	font-size: 0.7rem;
 	z-index: 10;
+	font-weight: 400;
 }
 
 
