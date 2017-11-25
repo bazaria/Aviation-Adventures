@@ -30,7 +30,7 @@ function toggleslide (slidenum) {
 		2:2,
 		3:2,
 		4:2,
-		5:3,
+		5:3.2,
 		6:1.5,
 	};
 	slide.removeClass('init-page');
@@ -109,7 +109,8 @@ function gallery_loader(){
                     var pswpElement = document.querySelectorAll('.pswp')[0];
                     var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, e.data.images[$(this).attr("alt")], {index: 0});
                     gallery.init();
-                });
+				});
+                $('#gallery-text'+ (i+1).toString()).text(gallery_names[i]);
             }
         },
     });

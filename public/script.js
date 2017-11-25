@@ -65,8 +65,15 @@ function gallery_loader(){
         url: "/gallery",
         success: function(data){
             var gallery = JSON.parse(data);
-            gallery_names = Object.keys(gallery);
-            console.log(gallery);
+            gallery_names = Object.keys(gallery);/*.sort(function(a,b){
+            if(a[a.length - 1] > b[b.length - 1]){
+                return 1;
+            }
+            else if(a[a.length - 1] < b[b.length - 1]){
+                return -1;
+            }
+            else return 0;
+            });*/
             for(var i=0; i< gallery_names.length; i++){
                 $('#gallery_img' + (i+1).toString())
                     .prop('alt',gallery_names[i])
@@ -76,6 +83,7 @@ function gallery_loader(){
                     var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, e.data.images[$(this).attr("alt")], {index: 0});
                     gallery.init();
                 });
+                $('#gallery-text'+ (i+1).toString()).text(gallery_names[i]);
             }
         },
     });
